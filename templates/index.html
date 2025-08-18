@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offerte Funko Pop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-5xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">🔥 Offerte Funko Pop di oggi</h1>
+    {% if deals %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for d in deals %}
+          <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            {% if d.image %}
+              <img src="{{ d.image }}" alt="Funko" class="w-full h-48 object-contain mb-4"/>
+            {% endif %}
+            <h2 class="font-semibold text-lg mb-2">{{ d.title }}</h2>
+            <div class="mt-auto">
+              <p>
+                <span class="text-green-600 font-bold">{{ "%.2f"|format(d.price) }} {{ d.currency }}</span>
+                {% if d.list_price %}
+                  <span class="line-through text-gray-500 ml-2">{{ "%.2f"|format(d.list_price) }}</span>
+                {% endif %}
+              </p>
+              {% if d.discount_pct %}
+                <p class="text-red-500 font-bold">Sconto: {{ d.discount_pct }}%</p>
+              {% endif %}
+              <a href="{{ d.url }}" target="_blank" rel="noopener" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Vai su Amazon</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <p class="text-sm text-gray-500 mt-6">I prezzi e la disponibilità possono variare. Link con Associate Tag.</p>
+    {% else %}
+      <p>Nessuna offerta trovata oggi 😢</p>
+    {% endif %}
+  </div>
+</body>
+</html>
