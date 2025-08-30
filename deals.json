@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Funko Pop! Spider-Man",
+    "link": "https://www.amazon.it/dp/B08XXXXXXX?tag=iltuo-21",
+    "image": "https://m.media-amazon.com/images/I/71abcd1234L._AC_SL1500_.jpg"
+  },
+  {
+    "title": "Funko Pop! Harry Potter",
+    "link": "https://www.amazon.it/dp/B09YYYYYYY?tag=iltuo-21",
+    "image": "https://m.media-amazon.com/images/I/61defghi567L._AC_SL1500_.jpg"
+  }
+  // Aggiungi fino a 50 prodotti per pagina
+]
