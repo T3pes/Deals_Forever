@@ -39,15 +39,6 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     nav.footer-links{display:flex;gap:16px;justify-content:center;margin-top:12px;font-size:14px}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Offerte Funko Pop",
-    "url":"https://tuonome.github.io/funko-deals/",
-    "potentialAction":{"@type":"SearchAction","target":"https://www.amazon.it/s?k=Funko+Pop&tag=sales0eb9-21","query-input":"required name=search_term_string"}
-  }
-  </script>
 </head>
 <body>
   <div class="container">
@@ -64,74 +55,14 @@
     <section class="hero">
       <h1>Le migliori offerte <span class="muted">Funko Pop</span>, in un’unica pagina</h1>
       <p>Trovi qui i link diretti alle offerte del giorno. Segui anche il canale Telegram per le notifiche in tempo reale.</p>
-      <div class="cta">
-        <!--<a class="btn primary" href="https://t.me/tuo_canale_telegram" target="_blank" rel="noopener">📣 Unisciti al canale Telegram</a>-->
-        <!--<a class="btn ghost" href="#come-funziona">ℹ️ Come funziona</a>-->
-      </div>
+      <div class="cta"></div>
     </section>
 
     <section id="offerte" class="grid">
       <div class="card">
         <h2 style="margin-top:0">Offerte di oggi</h2>
         <p class="muted" style="margin-top:-6px">Questa pagina elenca le offerte; per l’elenco aggiornato automaticamente puoi usare la nostra web app dinamica (link sotto) oppure i bot/strumenti.</p>
-        <ul class="list">
-          <li>
-            <strong>Elenco dinamico consigliato</strong><br/>
-            <script>
-              (async function(){
-                const API_ORIGIN = "https://TUO-RENDER-URL.onrender.com"; // <<-- sostituisci con il tuo dominio Render
-                const target = API_ORIGIN + "/deals";
-                const loading = document.getElementById("deals-loading");
-                const grid = document.getElementById("deals-grid");
-              
-                function esc(s){ return s ? s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c])) : ''; }
-              
-                try {
-                  const res = await fetch(target, { method: "GET" });
-                  if(!res.ok) throw new Error("HTTP " + res.status);
-                  const payload = await res.json();
-                  const deals = payload.deals || [];
-                  loading.style.display = "none";
-                  if(deals.length === 0){
-                    grid.style.display = "block";
-                    grid.innerHTML = "<p class='muted'>Nessuna offerta trovata al momento.</p>";
-                    return;
-                  }
-                  grid.style.display = "grid";
-                  grid.style.gridTemplateColumns = "repeat(auto-fill,minmax(240px,1fr))";
-                  grid.innerHTML = deals.map(d => `
-                    <div class="bg-white p-4 rounded-2xl shadow-md">
-                      ${d.image ? `<img src="${d.image}" alt="${esc(d.title)}" class="w-full h-48 object-contain mb-4"/>` : ''}
-                      <h3 class="font-semibold text-lg mb-2">${esc(d.title)}</h3>
-                      <p><span class="text-green-600 font-bold">${d.price ? d.price.toFixed(2) : '—'} ${d.currency || ''}</span>
-                        ${d.list_price ? `<span class="line-through text-gray-500 ml-2">${d.list_price.toFixed(2)}</span>` : ''}
-                      </p>
-                      ${d.discount_pct ? `<p class="text-red-500 font-bold">Sconto: ${d.discount_pct}%</p>` : ''}
-                      <a href="${d.url}" target="_blank" rel="noopener" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Vai su Amazon</a>
-                    </div>
-                  `).join("");
-                } catch(err){
-                  loading.textContent = "Errore nel caricamento delle offerte: " + (err.message || err);
-                }
-              })();
-              </script>
-            <!--Apri la tua web app FastAPI deployata (Render): <a href="https://tuo-sottodominio.onrender.com/" target="_blank" rel="noopener">apri le offerte</a>.-->
-          </li>
-          <li>
-            <strong>Clicca per le tutte le offerte di oggi Funko-Pop</strong><br/>
-            <a href="https://www.amazon.it/s?k=funko+pop&rh=n%3A22691421031%2Cp_36%3A-1500%2Cp_85%3A20930965031&dc=&crid=3VPKO29PL82AX&qid=1756565053&rnid=26901106031&sprefix=funko+pop%2Caps%2C140&ds=v1%3AnK3DH40H5uM5ldDneXtLtTUVw%2F3NIV5om9T8QN0A3jU&linkCode=ll2&tag=sales0eb9-21&linkId=8ef6ce36a40974fd072912d0d3ff15dd&language=it_IT&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn primary">🔎 Vai alle offerte Amazon</a>
-          </li>
-          <li>
-            <strong>Ricerca rapida su Amazon</strong><br/>
-            <a href="https://www.amazon.it/s?k=Funko+Pop&tag=sales0eb9-21" target="_blank" rel="noopener" class="btn primary">🔎 Vai alle offerte Amazon</a>
-          </li>
-          <li>
-            <strong>Filtri rapidi</strong><br/>
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Marvel&tag=sales0eb9-21" target="_blank" rel="noopener">Marvel</a> ·
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Star+Wars&tag=sales0eb9-21" target="_blank" rel="noopener">Star Wars</a> ·
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Disney&tag=sales0eb9-21" target="_blank" rel="noopener">Disney</a>
-          </li>
-        </ul>
+        <ul class="list" id="deals-list"></ul>
       </div>
       <aside class="card">
         <h3 style="margin-top:0">Info rapide</h3>
@@ -143,65 +74,18 @@
       </aside>
     </section>
 
-        <section id="offerte2" class="section card">
+    <section id="offerte2" class="section card">
       <div class="card">
         <h2 style="margin-top:0">Tutte le Offerte</h2>
-        <p class="muted" style="margin-top:-6px">Questa pagina elenca le offerte; per l’elenco aggiornato automaticamente puoi usare la nostra web app dinamica (link sotto) oppure i bot/strumenti.</p>
+        <p class="muted" style="margin-top:-6px">Questa pagina elenca tutte le offerte; per l’elenco aggiornato automaticamente puoi usare la nostra web app dinamica (link sotto) oppure i bot/strumenti.</p>
         <ul class="list">
           <li>
-            <strong>Clicca per le tutte le offerte sui Funko-Pop</strong><br/>
+            <strong>Clicca per tutte le offerte sui Funko Pop</strong><br/>
             <a href="https://www.amazon.it/s?k=funko+pop&rh=n%3A22691421031%2Cp_36%3A-1500%2Cp_85%3A20930965031%2Cp_6%3AA11IL2PNWYJU7H%2Cp_n_deal_type%3A26901109031&dc=&crid=RNL2C3LDDNTF&qid=1756565291&rnid=26901106031&sprefix=funko%2Caps%2C126&ds=v1%3AjbRE1XY0D5h%2FCByrr08DnQtg5xfiKsCliidVp14leK8&linkCode=ll2&tag=sales0eb9-21&linkId=62457e2de1bc67ffb9ff2bcf4d9da672&language=it_IT&ref_=as_li_ss_tl" target="_blank" rel="noopener" class="btn primary">🔎 Vai alle offerte Amazon</a>
-          </li>
-          <!--<li>
-            <strong>Ricerca rapida su Amazon</strong><br/>
-            <a href="https://www.amazon.it/s?k=Funko+Pop&tag=sales0eb9-21" target="_blank" rel="noopener" class="btn primary">🔎 Vai alle offerte Amazon</a>
-          </li>
-          <li>
-            <strong>Filtri rapidi</strong><br/>
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Marvel&tag=sales0eb9-21" target="_blank" rel="noopener">Marvel</a> ·
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Star+Wars&tag=sales0eb9-21" target="_blank" rel="noopener">Star Wars</a> ·
-            <a href="https://www.amazon.it/s?k=Funko+Pop+Disney&tag=sales0eb9-21" target="_blank" rel="noopener">Disney</a>
           </li>
         </ul>
       </div>
-      <aside class="card">
-        <h3 style="margin-top:0">Info rapide</h3>
-        <ul class="list" style="margin:0">
-          <li>🔒 Nessun dato personale raccolto su questa pagina.</li>
-          <li>🕒 Aggiorna i link all’occorrenza (<span class="kbd">pull-to-refresh</span> sul telefono).</li>
-          <li>💡 Usa sempre link con il tuo <em>Associate Tag</em> <code>-21</code>.</li>-->
-        </ul>
-      </aside>
     </section>
-
-    <!--<section id="come-funziona" class="section card">
-      <h2 style="margin-top:0">Come funziona</h2>
-      <ol>
-        <li>Crea o usa il tuo <strong>tag affiliato Amazon</strong> e rimpiazza <code>sales0eb9-21</code> nei link qui sopra.</li>
-        <li>Se hai pubblicato la <strong>web app dinamica</strong> su Render/VPS, sostituisci l’URL <code>tuo-sottodominio.onrender.com</code> con quello reale.</li>
-        <li>Condividi questa pagina come “sito” nella domanda di Amazon Associates.</li>
-      </ol>
-    </section>-->
-
-    <section id="privacy" class="section card">
-      <h2 style="margin-top:0">Privacy & Disclaimer</h2>
-      <p>Questa pagina non raccoglie dati personali, non utilizza cookie e non traccia in alcun modo i visitatori. Tutti i link sono <strong>affiliati Amazon</strong> e potrebbero generare una commissione. I prezzi e la disponibilità possono variare senza preavviso.</p>
-      <p>Per maggiori informazioni puoi consultare le <a href="https://affiliate-program.amazon.it/help/operating/agreement" target="_blank" rel="noopener">Condizioni del Programma Amazon EU Associates</a>.</p>
-    </section>
-
-    <section id="contatti" class="section card">
-      <h2 style="margin-top:0">Contatti</h2>
-      <p>Per richieste commerciali o rimozione contenuti: <a href="mailto:flaviopaone91@gmail.com">flaviopaone91@gmail.com</a></p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Funko Deals
-      <nav class="footer-links">
-        <a href="#privacy">Privacy</a>
-        <a href="#contatti">Contatti</a>
-      </nav>
-    </footer>
   </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
