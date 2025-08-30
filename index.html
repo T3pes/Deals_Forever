@@ -77,7 +77,45 @@
         <ul class="list">
           <li>
             <strong>Elenco dinamico consigliato</strong><br/>
-            Apri la tua web app FastAPI deployata (Render): <a href="https://tuo-sottodominio.onrender.com/" target="_blank" rel="noopener">apri le offerte</a>.
+            <script>
+              (async function(){
+                const API_ORIGIN = "https://TUO-RENDER-URL.onrender.com"; // <<-- sostituisci con il tuo dominio Render
+                const target = API_ORIGIN + "/deals";
+                const loading = document.getElementById("deals-loading");
+                const grid = document.getElementById("deals-grid");
+              
+                function esc(s){ return s ? s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c])) : ''; }
+              
+                try {
+                  const res = await fetch(target, { method: "GET" });
+                  if(!res.ok) throw new Error("HTTP " + res.status);
+                  const payload = await res.json();
+                  const deals = payload.deals || [];
+                  loading.style.display = "none";
+                  if(deals.length === 0){
+                    grid.style.display = "block";
+                    grid.innerHTML = "<p class='muted'>Nessuna offerta trovata al momento.</p>";
+                    return;
+                  }
+                  grid.style.display = "grid";
+                  grid.style.gridTemplateColumns = "repeat(auto-fill,minmax(240px,1fr))";
+                  grid.innerHTML = deals.map(d => `
+                    <div class="bg-white p-4 rounded-2xl shadow-md">
+                      ${d.image ? `<img src="${d.image}" alt="${esc(d.title)}" class="w-full h-48 object-contain mb-4"/>` : ''}
+                      <h3 class="font-semibold text-lg mb-2">${esc(d.title)}</h3>
+                      <p><span class="text-green-600 font-bold">${d.price ? d.price.toFixed(2) : '—'} ${d.currency || ''}</span>
+                        ${d.list_price ? `<span class="line-through text-gray-500 ml-2">${d.list_price.toFixed(2)}</span>` : ''}
+                      </p>
+                      ${d.discount_pct ? `<p class="text-red-500 font-bold">Sconto: ${d.discount_pct}%</p>` : ''}
+                      <a href="${d.url}" target="_blank" rel="noopener" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Vai su Amazon</a>
+                    </div>
+                  `).join("");
+                } catch(err){
+                  loading.textContent = "Errore nel caricamento delle offerte: " + (err.message || err);
+                }
+              })();
+              </script>
+            <!--Apri la tua web app FastAPI deployata (Render): <a href="https://tuo-sottodominio.onrender.com/" target="_blank" rel="noopener">apri le offerte</a>.-->
           </li>
           <li>
             <strong>Ricerca rapida su Amazon</strong><br/>
