@@ -83,8 +83,9 @@
           </li>
         `).join("");
       })
-      .catch(() => {
-        document.getElementById("deals-list").innerHTML = "<li>❌ Errore caricamento Funko</li>";
+      .catch(err => {
+        console.error("Errore nel caricamento di deals.json:", err);
+        document.getElementById("deals-list").innerHTML = "<li>❌ Errore caricamento delle offerte Funko</li>";
       });
 
     // --- Tech ---
@@ -104,8 +105,7 @@
       })
       .catch(err => {
         console.error("Errore nel caricamento di tech.json:", err);
-        document.getElementById("tech-list").innerHTML =
-          `<li>❌ Errore nel caricamento delle offerte Tech</li>`;
+        document.getElementById("tech-list").innerHTML = "<li>❌ Errore nel caricamento delle offerte Tech</li>";
       });
   });
   </script>
