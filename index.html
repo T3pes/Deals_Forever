@@ -4,63 +4,45 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Offerte Funko Pop & Tech – Sconti Giornalieri</title>
-  <meta name="description" content="Trova ogni giorno le migliori offerte sui Funko Pop e prodotti Tech con link diretti ad Amazon." />
-  <meta property="og:title" content="Offerte Funko Pop & Tech – Sconti Giornalieri" />
-  <meta property="og:description" content="Selezione aggiornata di sconti Funko Pop e tecnologia. Link affiliati Amazon." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tuonome.github.io/funko-deals/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1608889175123-8c9cf2d80a3c?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="description" content="Trova ogni giorno le migliori offerte sui Funko Pop e Tech con link diretti ad Amazon." />
   <style>
-    :root { --bg:#0b1020; --card:#121a37; --text:#e7ecff; --muted:#99a3c7; --brand:#6ae7ff; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    :root { --bg:#0b1020; --card:#121a37; --text:#e7ecff; --muted:#99a3c7; --brand:#6ae7ff; --ok:#7ef6a6; }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui}
     a{color:var(--brand);text-decoration:none}
     .container{max-width:980px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;align-items:center;gap:12px;font-weight:700}
     .logo .badge{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4b82ff, #6ae7ff)}
     .pill{font-size:13px;color:#0b1020;background:#c6f7d4;border-radius:999px;padding:6px 10px;font-weight:700}
-    .hero{margin:28px 0 20px;display:grid;gap:14px}
-    .hero h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0}
-    .hero p{color:var(--muted);margin:0}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:840px){.grid{grid-template-columns:1.2fr .8fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;margin-top:20px}
+    .list{display:grid;gap:12px;list-style:none;padding:0}
+    .list li{background:rgba(255,255,255,.04);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+    .deal-item img { max-width: 150px; height: auto; border-radius: 8px; margin: 8px 0; }
+    footer{opacity:.8;color:var(--muted);margin:28px 0 12px;text-align:center}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12)}
     .btn.primary{background:#4b82ff;border-color:#4b82ff;color:white}
-    .section{margin-top:22px}
-    .list{display:grid;gap:12px}
-    .list li{background:rgba(255,255,255,.04);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
-    footer{opacity:.8;color:var(--muted);margin:28px 0 12px;text-align:center}
-    .deal-item img {max-width:150px;height:auto;border-radius:8px;margin:8px 0;}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo"><span class="badge" aria-hidden>🧸</span><span>Funko & Tech Deals</span></div>
-      <a class="pill" href="#offerte">Funko Pop</a>
+      <div class="logo"><span class="badge">🧸</span><span>Funko & Tech Deals</span></div>
+      <a class="pill" href="#offerte-funko">Funko</a>
       <a class="pill" href="#offerte-tech">Tech</a>
     </header>
 
-    <section class="hero">
-      <h1>Le migliori offerte <span class="muted">Funko Pop & Tech</span>, in un’unica pagina</h1>
-      <p>Trovi qui i link diretti alle offerte del giorno, sempre aggiornate.</p>
-    </section>
-
-    <!-- Funko Pop -->
-    <section id="offerte" class="section card">
+    <!-- Sezione Funko -->
+    <section id="offerte-funko" class="card">
       <h2>Offerte Funko Pop</h2>
-      <ul class="list" id="deals-list">
-        <!-- caricamento dinamico da deals.json -->
-      </ul>
+      <p class="muted">Ecco le migliori offerte Funko Pop aggiornate.</p>
+      <ul class="list" id="deals-list"><li>Caricamento in corso...</li></ul>
     </section>
 
-    <!-- Tech -->
-    <section id="offerte-tech" class="section card">
+    <!-- Sezione Tech -->
+    <section id="offerte-tech" class="card">
       <h2>Offerte Tech</h2>
-      <ul class="list" id="tech-list">
-        <!-- caricamento dinamico da tech.json -->
-      </ul>
+      <p class="muted">Scopri le offerte tecnologiche aggiornate.</p>
+      <ul class="list" id="tech-list"><li>Caricamento in corso...</li></ul>
     </section>
 
     <footer>
@@ -69,41 +51,45 @@
   </div>
 
   <script>
-    // Funko Pop
-    fetch("deals.json")
-      .then(res => res.json())
-      .then(data => {
-        const dealsList = document.getElementById("deals-list");
-        dealsList.innerHTML = data.map(deal => `
-          <li class="deal-item">
-            <h3>${deal.title}</h3>
-            <img src="${deal.image}" alt="${deal.title}" />
-            <br>
-            <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
-          </li>
-        `).join("");
-      })
-      .catch(() => {
-        document.getElementById("deals-list").innerHTML = "<li>❌ Errore caricamento Funko</li>";
-      });
+    document.addEventListener("DOMContentLoaded", () => {
+      // Funko Pop
+      fetch("deals.json")
+        .then(res => res.json())
+        .then(data => {
+          const dealsList = document.getElementById("deals-list");
+          dealsList.innerHTML = Array.isArray(data) ? data.map(deal => `
+            <li class="deal-item">
+              <h3>${deal.title}</h3>
+              <img src="${deal.image}" alt="${deal.title}" />
+              <br>
+              <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
+            </li>
+          `).join("") : `<li>❌ JSON non valido</li>`;
+        })
+        .catch(err => {
+          console.error("Errore deals.json:", err);
+          document.getElementById("deals-list").innerHTML = `<li>❌ Errore nel caricamento Funko</li>`;
+        });
 
-    // Tech
-    fetch("tech.json")
-      .then(res => res.json())
-      .then(data => {
-        const techList = document.getElementById("tech-list");
-        techList.innerHTML = data.map(deal => `
-          <li class="deal-item">
-            <h3>${deal.title}</h3>
-            <img src="${deal.image}" alt="${deal.title}" />
-            <br>
-            <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
-          </li>
-        `).join("");
-      })
-      .catch(() => {
-        document.getElementById("tech-list").innerHTML = "<li>❌ Errore caricamento Tech</li>";
-      });
+      // Tech
+      fetch("tech.json")
+        .then(res => res.json())
+        .then(data => {
+          const techList = document.getElementById("tech-list");
+          techList.innerHTML = Array.isArray(data) ? data.map(deal => `
+            <li class="deal-item">
+              <h3>${deal.title}</h3>
+              <img src="${deal.image}" alt="${deal.title}" />
+              <br>
+              <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
+            </li>
+          `).join("") : `<li>❌ JSON non valido</li>`;
+        })
+        .catch(err => {
+          console.error("Errore tech.json:", err);
+          document.getElementById("tech-list").innerHTML = `<li>❌ Errore nel caricamento Tech</li>`;
+        });
+    });
   </script>
 </body>
 </html>
