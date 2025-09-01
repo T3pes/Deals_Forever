@@ -102,32 +102,30 @@
       </div>
     </section>
     <script>
-  // Funzione per caricare il JSON da un file esterno
-  function loadDeals() {
-    fetch('deals.json')  // Assicurati che il percorso sia corretto
-      .then(response => response.json())  // Converte la risposta in formato JSON
-      .then(data => {
-        console.log(data);  // Aggiungi questo per vedere se i dati vengono caricati correttamente
-        const dealsList = document.getElementById('deals-list');
-        const dealsHTML = data.map(deal => {
-          return `
-            <li class="deal-item">
-              <h3>${deal.title}</h3>
-              <img src="${deal.image}" alt="${deal.title}" />
-              <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
-            </li>
-          `;
-        }).join('');
-        dealsList.innerHTML = dealsHTML;
-      })
-      .catch(error => {
-        console.error('Errore nel caricamento del JSON:', error);
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("deals.json")
+          .then(res => res.json())
+          .then(data => {
+            if (!Array.isArray(data)) {
+              throw new Error("Il JSON non è un array!");
+            }
+            const dealsList = document.getElementById("deals-list");
+            dealsList.innerHTML = data.map(deal => `
+              <li class="deal-item">
+                <h3>${deal.title}</h3>
+                <img src="${deal.image}" alt="${deal.title}" />
+                <br>
+                <a href="${deal.link}" target="_blank" class="btn primary">Vai su Amazon</a>
+              </li>
+            `).join("");
+          })
+          .catch(err => {
+            console.error("Errore nel caricamento del JSON:", err);
+            document.getElementById("deals-list").innerHTML = 
+              `<li>❌ Errore nel caricamento delle offerte</li>`;
+          });
       });
-  }
-
-  // Carica le offerte quando la pagina è pronta
-  document.addEventListener('DOMContentLoaded', loadDeals);
-</script>
+    </script>
   </div>
 </body>
 </html>
