@@ -87,10 +87,11 @@
         document.getElementById("deals-list").innerHTML = "<li>❌ Errore caricamento Funko</li>";
       });
 
-    // Tech
+    // --- Tech ---
     fetch("tech.json")
       .then(res => res.json())
       .then(data => {
+        if (!Array.isArray(data)) throw new Error("Il JSON non è un array!");
         const techList = document.getElementById("tech-list");
         techList.innerHTML = data.map(deal => `
           <li class="deal-item">
@@ -101,9 +102,12 @@
           </li>
         `).join("");
       })
-      .catch(() => {
-        document.getElementById("tech-list").innerHTML = "<li>❌ Errore caricamento Tech</li>";
+      .catch(err => {
+        console.error("Errore nel caricamento di tech.json:", err);
+        document.getElementById("tech-list").innerHTML =
+          `<li>❌ Errore nel caricamento delle offerte Tech</li>`;
       });
+  });
   </script>
 </body>
 </html>
