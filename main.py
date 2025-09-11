@@ -5,7 +5,7 @@ app = FastAPI()
 
 # Carica il file delle offerte (puoi aggiornarlo a mano ogni volta)
 def load_deals():
-    with open("deals.json", "r", encoding="utf-8") as f:
+    with open("funko.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 @app.get("/deals")
