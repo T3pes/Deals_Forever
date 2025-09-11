@@ -53,7 +53,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Funko Pop
-      fetch("deals.json")
+      fetch("funko.json")
         .then(res => res.json())
         .then(data => {
           const dealsList = document.getElementById("deals-list");
@@ -67,7 +67,7 @@
           `).join("") : `<li>❌ JSON non valido</li>`;
         })
         .catch(err => {
-          console.error("Errore deals.json:", err);
+          console.error("Errore funko.json:", err);
           document.getElementById("deals-list").innerHTML = `<li>❌ Errore nel caricamento Funko</li>`;
         });
 
