@@ -3,115 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pop & Tech Deals – Guide e Offerte Esclusive</title>
-  <meta name="description" content="Scopri guide originali e le migliori offerte sui Funko Pop, tecnologia e lifestyle. Consigli per collezionisti e appassionati di shopping smart." />
-  <meta property="og:title" content="Pop & Tech Deals – Guide e Offerte Esclusive" />
-  <meta property="og:description" content="Guide uniche e selezione aggiornata di offerte sui Funko Pop, tech e lifestyle." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://t3pes.github.io/Funko_alert/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1608889175123-8c9cf2d80a3c?q=80&w=1200&auto=format&fit=crop" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🔥%3C/text%3E%3C/svg%3E" />
+  <title>Offerte e Guide – Funko Pop, Tech e Casa</title>
+  <meta name="description" content="Offerte selezionate e guide pratiche su Funko Pop, tecnologia e prodotti per la casa. Trova sconti e consigli utili." />
   <style>
-    :root { --bg:#0b1020; --card:#121a37; --text:#e7ecff; --muted:#99a3c7; --brand:#6ae7ff; --ok:#7ef6a6; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial} a{color:var(--brand);text-decoration:none}
+    :root { --bg:#0b1020; --card:#121a37; --text:#e7ecff; --muted:#99a3c7; --brand:#6ae7ff; }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--brand);text-decoration:none}
     .container{max-width:980px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
-    .logo .badge{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4b82ff,#6ae7ff);color:#fff;font-size:20px}
-    nav{display:flex;gap:12px;flex-wrap:wrap}
-    nav a{font-size:14px;padding:6px 12px;border-radius:8px;background:#1a2348;color:#fff}
-    h1{font-size:clamp(26px,4vw,38px);margin:18px 0}
-    h2{margin:16px 0}
-    .section{margin-top:28px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;margin-bottom:20px}
-    .list{display:grid;gap:12px;padding:0;list-style:none}
-    .list li{background:rgba(255,255,255,.04);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
-    .deal-item img{max-width:140px;border-radius:8px;margin:6px 0}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:#4b82ff;color:#fff;font-size:14px;margin-top:6px}
-    footer{margin:28px 0 12px;text-align:center;color:var(--muted);font-size:14px}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{font-weight:600;color:var(--text);opacity:.85}
+    nav a:hover{opacity:1;text-decoration:underline}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+    .logo .badge{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#4b82ff,#6ae7ff)}
+    h1{font-size:clamp(26px,4vw,36px);line-height:1.2;margin-top:28px}
+    .grid{display:grid;gap:20px;margin-top:24px}
+    @media(min-width:840px){.grid{grid-template-columns:2fr 1fr}}
+    .card{background:var(--card);border-radius:16px;padding:18px;border:1px solid rgba(255,255,255,.1)}
+    footer{margin-top:40px;font-size:14px;color:var(--muted);text-align:center}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo"><span class="badge">🔥</span>Pop & Tech Deals</div>
+      <div class="logo"><span class="badge">🛒</span> <span>Deals & Guide</span></div>
       <nav>
-        <a href="#guide">Guide</a>
-        <a href="#funko">Funko</a>
-        <a href="#tech">Tech</a>
-        <a href="#lifestyle">Casa & Lifestyle</a>
+        <a href="#offerte">Offerte</a>
+        <a href="guide/collezionismo-funko.html">Guida Funko</a>
+        <a href="guide/tech-smart.html">Guida Tech</a>
+        <a href="guide/deals-casa.html">Guida Casa</a>
       </nav>
     </header>
 
-    <section class="card">
-      <h1>Benvenuto su <em>Pop & Tech Deals</em></h1>
-      <p>
-        Questo sito nasce per aiutarti a <strong>risparmiare online</strong> e allo stesso tempo 
-        offrirti contenuti unici e originali: guide dettagliate, recensioni e consigli pratici.
-      </p>
-      <p>
-        Non ci limitiamo a elencare link: ogni categoria include <strong>articoli approfonditi</strong> 
-        e una selezione accurata delle migliori offerte aggiornate quotidianamente.
-      </p>
-    </section>
+    <h1>Benvenuto su Deals & Guide</h1>
+    <p>Qui trovi <strong>offerte selezionate</strong> su Amazon e <strong>guide pratiche</strong> per orientarti nel mondo del collezionismo, della tecnologia e della casa.  
+    Il nostro obiettivo è offrirti contenuti utili e aggiornati, non solo link, così avrai un motivo per tornare ogni volta.</p>
 
-    <section id="guide" class="section">
-      <h2>📚 Guide & Approfondimenti</h2>
-      <ul class="list">
-        <li><a href="guide/collezionismo-funko.html">Guida al collezionismo Funko Pop: trucchi e valutazioni</a></li>
-        <li><a href="guide/tech-smart.html">Come scegliere il giusto gadget tech senza spendere troppo</a></li>
-        <li><a href="guide/deals-casa.html">Casa & Lifestyle: come trovare davvero le offerte migliori</a></li>
-      </ul>
-    </section>
-
-    <section id="funko" class="section card">
-      <h2>🧸 Offerte Funko Pop</h2>
-      <p class="muted">Le ultime occasioni per i collezionisti. Aggiornate dal nostro database JSON.</p>
-      <ul class="list" id="funko-list"></ul>
-    </section>
-
-    <section id="tech" class="section card">
-      <h2>💻 Offerte Tech & Gadget</h2>
-      <p class="muted">Dai piccoli accessori agli ultimi dispositivi, le nostre scelte smart.</p>
-      <ul class="list" id="tech-list"></ul>
-    </section>
-
-    <section id="lifestyle" class="section card">
-      <h2>🏠 Casa & Lifestyle</h2>
-      <p class="muted">Articoli per la casa e il tempo libero, selezionati per qualità e prezzo.</p>
-      <ul class="list" id="lifestyle-list"></ul>
+    <section id="offerte" class="grid">
+      <div class="card">
+        <h2>Offerte del giorno</h2>
+        <p class="muted">Ecco una selezione di offerte aggiornate sui prodotti più richiesti.</p>
+        <ul id="deals-list"></ul>
+      </div>
+      <aside class="card">
+        <h3>Info</h3>
+        <ul>
+          <li>🔒 Nessun dato personale viene raccolto.</li>
+          <li>🕒 Offerte aggiornate periodicamente.</li>
+          <li>💡 Trovi anche guide e recensioni utili.</li>
+        </ul>
+      </aside>
     </section>
 
     <footer>
-      Partecipiamo al programma <strong>Amazon EU Associates</strong>. I link presenti possono generare una commissione senza costi extra per te.  
-      Prezzi e disponibilità possono variare.  
-      <br>© 2025 Pop & Tech Deals
+      Partecipiamo al programma <strong>Amazon EU Associates</strong>.  
+      Alcuni link possono generare commissioni senza costi aggiuntivi per te.
     </footer>
   </div>
 
   <script>
-    async function loadDeals(file, containerId) {
-      try {
-        const res = await fetch(file);
-        const data = await res.json();
-        const list = document.getElementById(containerId);
-        list.innerHTML = data.map(deal => `
-          <li class="deal-item">
-            <h3>${deal.title}</h3>
-            <img src="${deal.image}" alt="${deal.title}">
-            <div><strong>${deal.price ?? ""}</strong> <del>${deal.original_price ?? ""}</del></div>
-            <a href="${deal.link}" target="_blank" class="btn">🔗 Vai su Amazon</a>
-          </li>
-        `).join("");
-      } catch (e) {
-        console.error("Errore caricamento", file, e);
-      }
-    }
-
     document.addEventListener("DOMContentLoaded", () => {
-      loadDeals("funko.json", "funko-list");
-      loadDeals("tech.json", "tech-list");
-      loadDeals("lifestyle.json", "lifestyle-list");
+      fetch("deals.json")
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("deals-list");
+          list.innerHTML = data.map(item => `
+            <li style="margin-bottom:14px">
+              <strong>${item.title}</strong><br/>
+              <img src="${item.image}" alt="${item.title}" style="max-width:140px; border-radius:8px; margin:6px 0"/><br/>
+              <a href="${item.link}" target="_blank">🔗 Vai all'offerta</a>
+            </li>
+          `).join("");
+        })
+        .catch(() => {
+          document.getElementById("deals-list").innerHTML = "<li>❌ Nessuna offerta disponibile</li>";
+        });
     });
   </script>
 </body>
