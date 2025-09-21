@@ -139,6 +139,19 @@
         <div id="tech-pager" class="pagination" role="navigation" aria-label="Paginazione Tech"></div>
       </section>
 
+      <section id="casa" class="card" aria-labelledby="casa-h">
+        <h2 id="casa-h">Offerte Casa</h2>
+        <p class="muted">Prodotti per la casa in offerta oggi.</p>
+        <div class="controls">
+          <label class="mini">Mostra</label>
+          <select id="casa-page-size"><option value="12">12</option><option value="24">24</option><option value="50" selected>50</option></select>
+          <label class="mini">Ordina</label>
+          <select id="casa-sort"><option value="default">Predefinito</option><option value="price-asc">Prezzo ↑</option><option value="price-desc">Prezzo ↓</option></select>
+        </div>
+        <ul id="casa-list" class="list" aria-live="polite"><li class="note">Caricamento offerte…</li></ul>
+        <div id="casa-pager" class="pagination" role="navigation" aria-label="Paginazione casa"></div>
+      </section>
+
       <section id="contatti" class="card" aria-labelledby="contatti-h">
         <h2 id="contatti-h">Contatti</h2>
         <p>Richieste commerciali o rimozione contenuti: <a href="mailto:flaviopaone91@gmail.com">flaviopaone91@gmail.com</a></p>
