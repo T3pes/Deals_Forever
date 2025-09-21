@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Lampada Smart Z",
+    "link": "https://www.amazon.it/dp/B0EXAMPLELAMP?tag=YOUR_ASSOCIATE_TAG",
+    "image": "https://via.placeholder.com/300x300.png?text=Lampada",
+    "price": "29,99 €",
+    "original_price": "49,99 €"
+  },
+  {
+    "title": "Set coltelli cucina",
+    "link": "https://www.amazon.it/dp/B0EXAMPLEKITCHEN?tag=YOUR_ASSOCIATE_TAG",
+    "image": "https://via.placeholder.com/300x300.png?text=Coltelli",
+    "price": "39,99 €",
+    "original_price": "59,99 €"
+  }
+]
