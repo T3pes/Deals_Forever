@@ -26,13 +26,12 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
-      padding-top:70px; /* spazio per menu sticky */
+      padding-top:70px;
       padding-bottom:48px;
     }
     a{color:var(--brand); text-decoration:none}
     .wrap{max-width:var(--maxw);margin:0 auto;padding:20px;}
 
-    /* Header Sticky */
     header{
       position:fixed;
       top:0;left:0;right:0;
@@ -149,7 +148,7 @@
           <select id="casa-sort"><option value="default">Predefinito</option><option value="price-asc">Prezzo ↑</option><option value="price-desc">Prezzo ↓</option></select>
         </div>
         <ul id="casa-list" class="list" aria-live="polite"><li class="note">Caricamento offerte…</li></ul>
-        <div id="casa-pager" class="pagination" role="navigation" aria-label="Paginazione casa"></div>
+        <div id="casa-pager" class="pagination" role="navigation" aria-label="Paginazione Casa"></div>
       </section>
 
       <section id="contatti" class="card" aria-labelledby="contatti-h">
@@ -191,10 +190,10 @@
       }catch{ return fallback; }
     }
 
-    function renderList({data, containerId, pagerId, Id, sortSelectId}){
+    function renderList({data, containerId, pagerId, pageSizeSelectId, sortSelectId}){
       const container = document.getElementById(containerId);
       const pager = document.getElementById(pagerId);
-      const  = document.getElementById(Id);
+      const pageSizeSelect = document.getElementById(pageSizeSelectId);
       const sortSelect = document.getElementById(sortSelectId);
 
       let page = 1;
