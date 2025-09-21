@@ -156,14 +156,18 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const FUNKO_JSON = "deals.json";
+    const FUNKO_JSON = "funko.json";
     const TECH_JSON  = "tech.json";
+    const CASA_JSON  = "tech.json";
 
     const demoFunko = [
       {"title":"Funko Pop! Elvis Presley (Pharaoh Suit)","link":"https://www.amazon.it/dp/B09Q94FV6T?tag=sales0eb9-21","image":"https://m.media-amazon.com/images/I/71rcIJYHzHL._AC_SL1500_.jpg","price":"14,99 €","original_price":"24,99 €"}
     ];
     const demoTech = [
       {"title":"Auricolari Wireless X","link":"https://www.amazon.it/dp/B0EXAMPLE?tag=sales0eb9-21","image":"https://via.placeholder.com/300x300.png?text=Auricolari","price":"49,99 €","original_price":"79,99 €"}
+    ];
+    const demoCasa = [
+      {"title": "Lampada Smart Z","link": "https://www.amazon.it/dp/B0EXAMPLELAMP?tag=YOUR_ASSOCIATE_TAG","image": "https://via.placeholder.com/300x300.png?text=Lampada","price": "29,99 €","original_price": "49,99 €"}
     ];
 
     async function loadJsonOrFallback(path, fallback){
@@ -234,9 +238,11 @@
     (async function init(){
       const funko = await loadJsonOrFallback(FUNKO_JSON, demoFunko);
       const tech  = await loadJsonOrFallback(TECH_JSON, demoTech);
+      const casa  = await loadJsonOrFallback(CASA_JSON, demoCasa);
 
       renderList({data: funko,containerId:'funko-list',pagerId:'funko-pager',pageSizeSelectId:'funko-page-size',sortSelectId:'funko-sort'});
       renderList({data: tech,containerId:'tech-list',pagerId:'tech-pager',pageSizeSelectId:'tech-page-size',sortSelectId:'tech-sort'});
+      renderList({data: casa,containerId:'casa-list',pagerId:'casa-pager',pageSizeSelectId:'casa-page-size',sortSelectId:'casa-sort'});
     })();
   </script>
 </body>
