@@ -181,7 +181,7 @@
       const sortSelect = document.getElementById(sortSelectId);
 
       let page = 1;
-      function getPageSize(){ return parseInt(pageSizeSelect.value)||50 }
+      function getPageSize(){ return parseInt(pageSizeSelect.value)||1 }
       function sortData(arr){
         const mode = sortSelect.value;
         if(mode.includes("price")){
