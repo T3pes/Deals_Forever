@@ -3,161 +3,259 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Offerte Amazon: Funko Pop, Tech & Casa — Guide e Sconti</title>
-  <meta name="description" content="Scopri offerte aggiornate su Funko Pop, tecnologia e prodotti per la casa. Guide pratiche, recensioni e sconti selezionati ogni giorno." />
-  <meta name="author" content="Deals & Guide" />
-  <meta property="og:title" content="Offerte Amazon: Funko Pop, Tech & Casa" />
-  <meta property="og:description" content="Sconti giornalieri, guide pratiche e consigli per risparmiare. Funko Pop, Tech e Casa." />
+  <title>Deals Forever — Offerte giornaliere</title>
+  <meta name="description" content="Scopri ogni giorno le migliori offerte Funko Pop e Tech su Amazon. Aggiornamenti costanti, trasparenza e link affiliati." />
+  <meta name="author" content="Funko & Tech Deals" />
+  <meta property="og:title" content="Funko & Tech Deals — Offerte giornaliere" />
+  <meta property="og:description" content="Scopri ogni giorno le migliori offerte Funko Pop e Tech su Amazon. Aggiornamenti costanti, trasparenza e link affiliati." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Funko & Tech Deals" />
   <meta name="theme-color" content="#0b1020" />
 
   <style>
     :root{
-      --bg:#0b1020; --card:#121a37; --muted:#99a3c7; --brand:#6ae7ff;
-      --glass:rgba(255,255,255,.04); --accent:#4b82ff;
-      --radius:14px; --gap:16px; --maxw:1200px;
+      --bg:#0b1020; --card:#121a37; --muted:#99a3c7; --brand:#6ae7ff; --glass: rgba(255,255,255,.04);
+      --maxw:1100px; --radius:14px; --gap:16px; --accent:#4b82ff;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#e7ecff;
-         font-family:Inter,system-ui,Roboto,"Helvetica Neue",Arial;
-         line-height:1.6;-webkit-font-smoothing:antialiased}
-    a{color:var(--brand);text-decoration:none}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{width:46px;height:46px;border-radius:12px;
-          display:grid;place-items:center;font-size:22px;
-          background:linear-gradient(135deg,#4b82ff,#6ae7ff)}
-    nav{display:flex;gap:12px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:10px;
-          border:1px solid rgba(255,255,255,.05);font-weight:600}
-    .hero{margin:20px 0;padding:20px;background:var(--card);border-radius:var(--radius)}
-    .hero h1{margin:0;font-size:clamp(24px,4vw,36px)}
-    .hero p{margin:8px 0 0;color:var(--muted)}
-    .card{background:var(--card);border-radius:var(--radius);padding:18px;margin-top:20px;border:1px solid rgba(255,255,255,.05)}
-    h2{margin-top:0;font-size:22px}
-    .list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-    .item{display:flex;gap:14px;align-items:flex-start;background:var(--glass);padding:12px;border-radius:12px}
-    .thumb{width:120px;height:120px;flex-shrink:0;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#111}
-    .thumb img{max-width:100%;max-height:100%;object-fit:contain}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#e7ecff;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding-bottom:48px;
+    }
+    a{color:var(--brand); text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#4b82ff,#6ae7ff);font-size:22px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{background:transparent;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.04)}
+    .mini{font-size:13px;color:var(--muted)}
+    .hero{margin:22px 0 12px}
+    .hero h1{font-size:clamp(22px,4.6vw,34px);margin:0}
+    .hero p{color:var(--muted);margin:6px 0 0}
+    .card{background:var(--card);border-radius:var(--radius);padding:16px;margin-top:16px;border:1px solid rgba(255,255,255,.04)}
+    .list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .item{display:flex;gap:12px;align-items:flex-start;background:var(--glass);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.03)}
+    .thumb{width:120px;height:120px;background:#111;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+    .thumb img{max-width:100%;height:100%;object-fit:contain}
+    .meta{flex:1;min-width:0}
     .meta h3{margin:0 0 6px;font-size:16px}
-    .price{display:flex;gap:10px;align-items:center;margin:6px 0}
-    .price .current{font-weight:700;color:#7ef6a6}
-    .price .orig{text-decoration:line-through;opacity:.7}
-    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-    .btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.06)}
+    .price{display:flex;gap:10px;align-items:center;margin:8px 0}
+    .price .current{font-weight:800;color:#7ef6a6}
+    .price .orig{opacity:.7;text-decoration:line-through}
+    .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.06);background:transparent;cursor:pointer}
     .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
     .muted{color:var(--muted)}
-    footer{margin:30px 0 10px;text-align:center;font-size:14px;color:var(--muted)}
-    .disclosure{margin-top:12px;padding:12px;border-radius:10px;
-                background:#063028;border:1px solid #0e6c4f;color:#bff0d8;font-size:14px}
-    .grid-cards{display:grid;gap:14px}
-    @media(min-width:800px){.grid-cards{grid-template-columns:repeat(3,1fr)}}
+    footer{margin:28px 0 8px;color:var(--muted);text-align:center;font-size:14px}
+    .disclosure{background:#063028;border-radius:10px;padding:12px;border:1px solid #0e6c4f;color:#bff0d8;margin-top:12px;font-size:14px}
+    .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+    select{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:#e7ecff}
+    .pagination{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    .page-btn{padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--muted);cursor:pointer}
+    .page-btn.active{background:var(--accent);color:#051330}
+    .note{font-size:13px;color:var(--muted)}
+    .grid-cards{display:grid;gap:12px}
+    @media(min-width:700px){.grid-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1000px){.grid-cards{grid-template-columns:repeat(3,1fr)}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo">🛒</div>
+        <div class="logo" aria-hidden="true">🧸</div>
         <div>
-          <strong>Deals & Guide</strong><br/>
-          <span style="font-size:13px;color:var(--muted)">Offerte e Consigli</span>
+          <div style="font-weight:800">Funko & Tech Deals</div>
+          <div class="mini">Offerte giornaliere selezionate</div>
         </div>
       </div>
-      <nav>
+      <nav aria-label="Navigazione principale">
+        <a href="#home">Home</a>
         <a href="#funko">Funko Pop</a>
         <a href="#tech">Tech</a>
-        <a href="#casa">Casa</a>
         <a href="#guide">Guide</a>
         <a href="#about">Chi Siamo</a>
         <a href="#contatti">Contatti</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <h1>Offerte Amazon e Guide — Funko, Tech & Casa</h1>
-      <p>Ogni giorno selezioniamo <strong>sconti affidabili</strong> e scriviamo <strong>guide pratiche</strong> per aiutarti a scegliere con criterio. Non solo link, ma anche contenuti originali che ti danno valore.</p>
-      <div class="disclosure">
-        <strong>Nota Affiliazione:</strong> Partecipiamo al programma Amazon EU Associates.  
-        I link potrebbero generare una piccola commissione senza costi extra per te.
-      </div>
-    </section>
-
     <main>
+      <section id="home" class="hero card">
+        <h1>Offerte Funko Pop & Tech — ogni giorno</h1>
+        <p>Selezioniamo con cura le migliori offerte su Amazon: Funko Pop e prodotti Tech. I link sono affiliati e ci permettono di mantenere il progetto senza costi extra per te.</p>
+        <div class="disclosure">
+          <strong>Disclosure:</strong> Funko & Tech Deals partecipa al programma <strong>Amazon EU Associates</strong>. Come affiliati potremmo ricevere una commissione dagli acquisti idonei effettuati tramite i nostri link.
+        </div>
+      </section>
+
       <section id="funko" class="card">
-        <h2>🎁 Offerte Funko Pop</h2>
-        <ul id="funko-list" class="list"><li class="muted">Caricamento...</li></ul>
+        <h2>Offerte Funko Pop</h2>
+        <p class="muted">I Funko Pop più scontati di oggi.</p>
+        <div class="controls">
+          <label class="mini">Mostra</label>
+          <select id="funko-page-size"><option value="12">12</option><option value="24">24</option><option value="50" selected>50</option></select>
+          <label class="mini">Ordina</label>
+          <select id="funko-sort"><option value="default">Predefinito</option><option value="price-asc">Prezzo ↑</option><option value="price-desc">Prezzo ↓</option></select>
+        </div>
+        <ul id="funko-list" class="list" aria-live="polite">
+          <li class="note">Caricamento offerte Funko…</li>
+        </ul>
+        <div id="funko-pager" class="pagination"></div>
       </section>
 
       <section id="tech" class="card">
-        <h2>💻 Offerte Tech</h2>
-        <ul id="tech-list" class="list"><li class="muted">Caricamento...</li></ul>
-      </section>
-
-      <section id="casa" class="card">
-        <h2>🏠 Offerte Casa & Lifestyle</h2>
-        <ul id="casa-list" class="list"><li class="muted">Caricamento...</li></ul>
+        <h2>Offerte Tech</h2>
+        <p class="muted">Prodotti tecnologici in offerta oggi.</p>
+        <div class="controls">
+          <label class="mini">Mostra</label>
+          <select id="tech-page-size"><option value="12">12</option><option value="24">24</option><option value="50" selected>50</option></select>
+          <label class="mini">Ordina</label>
+          <select id="tech-sort"><option value="default">Predefinito</option><option value="price-asc">Prezzo ↑</option><option value="price-desc">Prezzo ↓</option></select>
+        </div>
+        <ul id="tech-list" class="list" aria-live="polite">
+          <li class="note">Caricamento offerte Tech…</li>
+        </ul>
+        <div id="tech-pager" class="pagination"></div>
       </section>
 
       <section id="guide" class="card">
-        <h2>📚 Guide & Consigli</h2>
+        <h2>Guide & Consigli</h2>
         <div class="grid-cards">
-          <article class="card"><h3>Come scegliere un Funko Pop</h3><p class="muted">Edizioni esclusive, stato della confezione e autenticità contano. Scopri come riconoscerli.</p></article>
-          <article class="card"><h3>Risparmiare su Tech</h3><p class="muted">Confronta recensioni e prezzi, evita falsi affari. Ecco i criteri principali.</p></article>
-          <article class="card"><h3>Casa & Lifestyle</h3><p class="muted">Dai piccoli elettrodomestici alle decorazioni: guida rapida alle migliori scelte.</p></article>
+          <article class="card">
+            <h3>Come scegliere un Funko Pop</h3>
+            <p class="muted">Verifica edizione, confezione e autenticità prima dell’acquisto.</p>
+            <a href="#funko" class="btn">Scopri offerte Funko</a>
+          </article>
+          <article class="card">
+            <h3>Risparmiare sui prodotti Tech</h3>
+            <p class="muted">Leggi recensioni e confronta sempre i prezzi per ottenere il massimo risparmio.</p>
+            <a href="#tech" class="btn">Scopri offerte Tech</a>
+          </article>
+          <article class="card">
+            <h3>FAQ</h3>
+            <p class="muted">Dubbi sui link affiliati o notifiche? Contattaci per assistenza.</p>
+            <a href="#contatti" class="btn">Contattaci</a>
+          </article>
         </div>
       </section>
 
       <section id="about" class="card">
         <h2>Chi siamo</h2>
-        <p>Siamo appassionati di <strong>collezionismo e tecnologia</strong>. Questo sito nasce per condividere offerte e creare contenuti utili che ti aiutano davvero a risparmiare tempo e denaro.</p>
+        <p>Siamo un piccolo team di appassionati di Funko Pop e tecnologia. Ogni giorno selezioniamo manualmente (e tramite automazioni) le migliori offerte su Amazon.</p>
+        <p class="muted">Il nostro obiettivo è aiutarti a risparmiare tempo e denaro in modo trasparente.</p>
       </section>
 
       <section id="contatti" class="card">
         <h2>Contatti</h2>
-        <p>Email: <a href="mailto:flaviopaone91@gmail.com">flaviopaone91@gmail.com</a></p>
+        <p>Per richieste commerciali o informazioni: <a href="mailto:flaviopaone91@gmail.com">flaviopaone91@gmail.com</a></p>
       </section>
     </main>
 
     <footer>
-      © <span id="year"></span> Deals & Guide · <a href="#privacy">Privacy</a> · <a href="#contatti">Contatti</a>
+      © <span id="year"></span> Funko & Tech Deals · <a href="#privacy">Privacy</a> · <a href="#contatti">Contatti</a>
     </footer>
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const demo = [
-      {"title":"Demo prodotto","link":"https://www.amazon.it","image":"https://via.placeholder.com/120","price":"9,99 €","original_price":"19,99 €"}
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const FUNKO_JSON = "deals.json";
+    const TECH_JSON  = "tech.json";
+
+    const demoFunko = [
+      {"title":"Funko Pop! Elvis Presley (Pharaoh Suit)","link":"https://www.amazon.it/dp/B09Q94FV6T?tag=sales0eb9-21","image":"https://m.media-amazon.com/images/I/71rcIJYHzHL._AC_SL1500_.jpg","price":"14,99 €","original_price":"24,99 €"}
     ];
-    async function loadJson(id,file){
+    const demoTech = [
+      {"title":"Auricolari Wireless X (Demo)","link":"https://www.amazon.it/dp/B0EXAMPLE?tag=sales0eb9-21","image":"https://via.placeholder.com/300x300.png?text=Auricolari","price":"49,99 €","original_price":"79,99 €"}
+    ];
+
+    async function loadJson(path, fallback){
       try{
-        const r=await fetch(file); if(!r.ok) throw new Error();
-        return await r.json();
-      }catch(e){return demo}
+        const res = await fetch(path,{cache:"no-store"});
+        if(!res.ok) throw new Error("Errore "+res.status);
+        const j = await res.json();
+        return Array.isArray(j.deals) ? j.deals : j;
+      }catch(e){
+        console.warn("Fallback su",path,e);
+        return fallback;
+      }
     }
-    function render(list,id){
-      const ul=document.getElementById(id);
-      ul.innerHTML=list.map(x=>`
-        <li class="item">
-          <div class="thumb"><img src="${x.image}" alt="${x.title}"></div>
-          <div class="meta">
-            <h3>${x.title}</h3>
-            <div class="price">
-              ${x.original_price?`<span class="orig">${x.original_price}</span>`:''}
-              <span class="current">${x.price}</span>
+
+    function escapeHtml(s){return s? s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"):""}
+
+    function renderList({data, containerId, pagerId, pageSizeSelectId, sortSelectId}){
+      const container=document.getElementById(containerId);
+      const pager=document.getElementById(pagerId);
+      const pageSizeSelect=document.getElementById(pageSizeSelectId);
+      const sortSelect=document.getElementById(sortSelectId);
+
+      let page=1;
+      function getPageSize(){return parseInt(pageSizeSelect.value)||50}
+      function sortData(arr){
+        const mode=sortSelect.value;
+        if(mode.includes("price")){
+          return arr.slice().sort((a,b)=>{
+            const pa=parseFloat((a.price||"").replace(/[^0-9,\.]/g,"").replace(",","."))||0;
+            const pb=parseFloat((b.price||"").replace(/[^0-9,\.]/g,"").replace(",","."))||0;
+            return mode==="price-asc"? pa-pb:pb-pa;
+          });
+        }
+        return arr;
+      }
+      function draw(){
+        const sorted=sortData(data);
+        const pageSize=getPageSize();
+        const total=sorted.length;
+        const pages=Math.max(1,Math.ceil(total/pageSize));
+        if(page>pages) page=pages;
+        const start=(page-1)*pageSize;
+        const slice=sorted.slice(start,start+pageSize);
+
+        container.innerHTML=slice.map(item=>`
+          <li class="item">
+            <div class="thumb">
+              ${item.image? `<img src="${item.image}" alt="${escapeHtml(item.title)}">` : `<span class="mini">No image</span>`}
             </div>
-            <div class="actions">
-              <a class="btn primary" href="${x.link}" target="_blank">Vai su Amazon</a>
-              <a class="btn" href="https://t.me/share/url?url=${encodeURIComponent(x.link)}&text=${encodeURIComponent(x.title)}">Condividi</a>
+            <div class="meta">
+              <h3>${escapeHtml(item.title)}</h3>
+              <div class="price">
+                ${item.original_price? `<div class="orig muted">${escapeHtml(item.original_price)}</div>`:""}
+                <div class="current">${escapeHtml(item.price||"")}</div>
+              </div>
+              <div class="actions">
+                <a class="btn primary" href="${item.link}" target="_blank" rel="noopener">Vai su Amazon</a>
+              </div>
             </div>
-          </div>
-        </li>`).join("");
+          </li>`).join("");
+
+        pager.innerHTML="";
+        const prev=document.createElement("button");prev.className="page-btn";prev.textContent="← Prev";prev.disabled=page<=1;
+        prev.onclick=()=>{page--;draw()};pager.appendChild(prev);
+        for(let p=1;p<=pages;p++){
+          const b=document.createElement("button");b.className="page-btn"+(p===page?" active":"");b.textContent=p;
+          b.onclick=()=>{page=p;draw()};pager.appendChild(b);
+        }
+        const next=document.createElement("button");next.className="page-btn";next.textContent="Next →";next.disabled=page>=pages;
+        next.onclick=()=>{page++;draw()};pager.appendChild(next);
+      }
+      pageSizeSelect.onchange=()=>{page=1;draw()};
+      sortSelect.onchange=()=>{page=1;draw()};
+      draw();
     }
-    (async()=>{
-      render(await loadJson("funko-list","deals.json"),"funko-list");
-      render(await loadJson("tech-list","tech.json"),"tech-list");
-      render(await loadJson("casa-list","casa.json"),"casa-list");
+
+    (async function init(){
+      const funko=await loadJson(FUNKO_JSON,demoFunko);
+      const tech=await loadJson(TECH_JSON,demoTech);
+      renderList({data:funko,containerId:"funko-list",pagerId:"funko-pager",pageSizeSelectId:"funko-page-size",sortSelectId:"funko-sort"});
+      renderList({data:tech,containerId:"tech-list",pagerId:"tech-pager",pageSizeSelectId:"tech-page-size",sortSelectId:"tech-sort"});
     })();
   </script>
 </body>
