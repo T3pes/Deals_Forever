@@ -1,16 +1,26 @@
 [
   {
-    "title": "Lampada Smart Z",
-    "link": "https://www.amazon.it/dp/B0EXAMPLELAMP?tag=YOUR_ASSOCIATE_TAG",
-    "image": "https://via.placeholder.com/300x300.png?text=Lampada",
+    "title": "Lampada Smart Wi-Fi compatibile Alexa",
+    "link": "https://www.amazon.it/dp/B08XYZ1234?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/61B1uYPjLXL._AC_SL1500_.jpg",
     "price": "29,99 €",
-    "original_price": "49,99 €"
+    "original_price": "49,99 €",
+    "review": "Controllo vocale e app intuitiva. Perfetta per creare atmosfera in salotto."
   },
   {
-    "title": "Set coltelli cucina",
-    "link": "https://www.amazon.it/dp/B0EXAMPLEKITCHEN?tag=YOUR_ASSOCIATE_TAG",
-    "image": "https://via.placeholder.com/300x300.png?text=Coltelli",
-    "price": "39,99 €",
-    "original_price": "59,99 €"
+    "title": "Aspirapolvere Senza Fili 2 in 1",
+    "link": "https://www.amazon.it/dp/B09XYZ5678?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/71yA5bP4tFL._AC_SL1500_.jpg",
+    "price": "129,00 €",
+    "original_price": "179,00 €",
+    "review": "Leggero ma potente, ottima autonomia della batteria. Facile da svuotare."
+  },
+  {
+    "title": "Friggitrice ad Aria 5,5L",
+    "link": "https://www.amazon.it/dp/B08XYZ9999?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/71cV8o2eKUL._AC_SL1500_.jpg",
+    "price": "89,00 €",
+    "original_price": "129,00 €",
+    "review": "Cucina croccante e senza olio. Capienza adatta per famiglie fino a 4 persone."
   }
 ]
