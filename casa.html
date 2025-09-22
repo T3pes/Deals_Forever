@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Deals Forever — Offerte Casa</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand"><div class="logo">🏠</div><div>Deals Forever</div></div>
+    <nav><a href="index.html">← Home</a></nav>
+  </header>
+
+  <div class="wrap">
+    <main>
+      <section class="card">
+        <h1>Offerte Casa</h1>
+        <p>Prodotti per la casa e la vita quotidiana in offerta.</p>
+        <ul id="casa-list" class="list"><li>Caricamento…</li></ul>
+        <div id="casa-pager" class="pagination"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/render.js"></script>
+  <script>
+    renderCategory({
+      dataFile: "data/casa.json",
+      containerId: "casa-list",
+      pagerId: "casa-pager"
+    });
+  </script>
+</body>
+</html>
