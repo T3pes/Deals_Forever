@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Deals Forever — Offerte Tech</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand"><div class="logo">💻</div><div>Deals Forever</div></div>
+    <nav><a href="index.html">← Home</a></nav>
+  </header>
+
+  <div class="wrap">
+    <main>
+      <section class="card">
+        <h1>Offerte Tech</h1>
+        <p>Scopri le migliori offerte tecnologiche su Amazon.</p>
+        <ul id="tech-list" class="list"><li>Caricamento…</li></ul>
+        <div id="tech-pager" class="pagination"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/render.js"></script>
+  <script>
+    renderCategory({
+      dataFile: "data/tech.json",
+      containerId: "tech-list",
+      pagerId: "tech-pager"
+    });
+  </script>
+</body>
+</html>
