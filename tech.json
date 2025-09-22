@@ -1,16 +1,26 @@
 [
   {
-    "title": "Auricolari Wireless X",
-    "link": "https://www.amazon.it/dp/B0EXAMPLE?tag=YOUR_ASSOCIATE_TAG",
-    "image": "https://via.placeholder.com/300x300.png?text=Auricolari",
+    "title": "Auricolari Bluetooth Noise Cancelling",
+    "link": "https://www.amazon.it/dp/B09XYZ1234?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/61vYq8J5V9L._AC_SL1500_.jpg",
     "price": "49,99 €",
-    "original_price": "79,99 €"
+    "original_price": "79,99 €",
+    "review": "Audio pulito e bassi profondi. Ottima autonomia fino a 8 ore."
   },
   {
-    "title": "Smartwatch Y",
-    "link": "https://www.amazon.it/dp/B0EXAMPLE2?tag=YOUR_ASSOCIATE_TAG",
-    "image": "https://via.placeholder.com/300x300.png?text=Watch",
-    "price": "129,99 €",
-    "original_price": "199,99 €"
+    "title": "Smartwatch Fitness Tracker",
+    "link": "https://www.amazon.it/dp/B08XYZ5678?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/71D9ImsvEtL._AC_SL1500_.jpg",
+    "price": "39,90 €",
+    "original_price": "59,90 €",
+    "review": "Perfetto per monitorare sonno, battito e passi. Schermo AMOLED ben visibile."
+  },
+  {
+    "title": "Mouse Gaming RGB 7200 DPI",
+    "link": "https://www.amazon.it/dp/B07XYZ9999?tag=TUO_TAG",
+    "image": "https://m.media-amazon.com/images/I/81V1Y5R8mZL._AC_SL1500_.jpg",
+    "price": "24,99 €",
+    "original_price": "39,99 €",
+    "review": "Ergonomico e leggero, con LED RGB personalizzabili. Ottimo per gaming competitivo."
   }
 ]
