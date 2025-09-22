@@ -3,173 +3,97 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever — Offerte giornaliere</title>
-  <meta name="description" content="Offerte giornaliere su Amazon: Funko Pop, Tech e Casa. Recensioni, sconti e consigli per risparmiare." />
-  <style>
-    :root{
-      --bg:#0b1020; --card:#121a37; --muted:#99a3c7; --brand:#6ae7ff; --accent:#4b82ff;
-      --radius:14px; --gap:16px;
-    }
-    body{margin:0;background:var(--bg);color:#fff;font-family:Inter,sans-serif;padding-top:70px}
-    .wrap{max-width:1100px;margin:auto;padding:20px}
-    header{position:fixed;top:0;left:0;right:0;background:#111c;
-      backdrop-filter:blur(6px);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;z-index:100}
-    nav a{margin:0 8px;color:var(--brand);text-decoration:none}
-    h2{margin-top:0}
-    .list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-    .item{background:var(--card);border-radius:var(--radius);padding:12px;display:flex;gap:12px;position:relative}
-    .thumb{width:120px;height:120px;flex-shrink:0;border-radius:12px;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center}
-    .thumb img{max-width:100%;height:100%;object-fit:contain}
-    .meta{flex:1;display:flex;flex-direction:column}
-    .meta h3{margin:0 0 6px;font-size:16px}
-    .review{font-size:13px;color:var(--muted);margin-bottom:6px}
-    .price{margin:6px 0}
-    .price .current{font-weight:700;color:#7ef6a6}
-    .price .orig{text-decoration:line-through;opacity:.7;margin-left:8px}
-    .actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
-    .btn{padding:8px 12px;border-radius:8px;font-size:14px;cursor:pointer;text-decoration:none}
-    .btn.primary{background:var(--accent);color:#fff}
-    .btn.share{background:#2a2f4c;color:#fff}
-    .badge{position:absolute;top:8px;left:8px;background:#ff3b3b;color:#fff;font-size:12px;
-      padding:3px 6px;border-radius:6px;font-weight:700}
-    .controls{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap}
-    .controls input,.controls select{padding:6px 8px;border-radius:6px;border:none}
-    .telegram{margin:20px 0;padding:16px;border-radius:12px;background:#172c44;text-align:center}
-    .telegram a{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:var(--brand);color:#000;font-weight:600;text-decoration:none}
-  </style>
+  <title>Deals Forever — Offerte giornaliere Amazon</title>
+  <meta name="description" content="Offerte giornaliere sui migliori Funko Pop, prodotti Tech e articoli per la Casa. Scopri sconti, guide e consigli per risparmiare." />
+  <meta name="author" content="Deals Forever" />
+  <meta property="og:title" content="Deals Forever — Offerte giornaliere Amazon" />
+  <meta property="og:description" content="Offerte selezionate, aggiornate ogni giorno con guide e recensioni." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
   <header>
-    <div><strong>Deals Forever</strong></div>
+    <div class="brand">
+      <div class="logo" aria-hidden>🔥</div>
+      <div>
+        <div style="font-weight:800">Deals Forever</div>
+        <div class="mini">Offerte giornaliere</div>
+      </div>
+    </div>
     <nav>
-      <a href="#funko">Funko</a>
-      <a href="#tech">Tech</a>
-      <a href="#casa">Casa</a>
-      <a href="#telegram">Telegram</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="funko.html">Funko Pop</a>
+      <a href="tech.html">Tech</a>
+      <a href="casa.html">Casa</a>
+      <a href="guide.html">Guide</a>
+      <a href="about.html">Chi siamo</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
   <div class="wrap">
-    <h1>Offerte giornaliere Amazon</h1>
-    <p>Scopri le migliori offerte su Funko Pop, prodotti Tech e articoli per la Casa. Recensioni brevi, sconti e consigli per risparmiare ogni giorno.</p>
+    <main>
+      <section class="hero card">
+        <h1>Benvenuto su Deals Forever</h1>
+        <p>Ogni giorno selezioniamo le <strong>migliori offerte Amazon</strong> su <a href="funko.html">Funko Pop</a>, <a href="tech.html">prodotti Tech</a> e <a href="casa.html">articoli per la Casa</a>.  
+        Qui trovi <em>guide, recensioni e consigli</em> per risparmiare senza perdere qualità.</p>
+        <div class="disclosure">
+          <strong>Disclosure:</strong> Partecipiamo al programma <strong>Amazon EU Associates</strong>. Alcuni link sono di affiliazione.
+        </div>
+      </section>
 
-    <!-- === FUNKO === -->
-    <section id="funko">
-      <h2>Offerte Funko Pop</h2>
-      <div class="controls">
-        <input type="text" id="funko-search" placeholder="Cerca Funko...">
-        <select id="funko-sort">
-          <option value="default">Ordina</option>
-          <option value="price-asc">Prezzo ↑</option>
-          <option value="price-desc">Prezzo ↓</option>
-        </select>
-      </div>
-      <ul id="funko-list" class="list"><li>Caricamento…</li></ul>
-    </section>
+      <section class="card">
+        <h2>Categorie principali</h2>
+        <div class="grid-cards">
+          <a class="item" href="funko.html">
+            <div class="thumb"><img src="assets/img/funko.jpg" alt="Funko Pop"/></div>
+            <div class="meta">
+              <h3>Funko Pop</h3>
+              <p class="muted">Colleziona i tuoi personaggi preferiti in offerta.</p>
+            </div>
+          </a>
+          <a class="item" href="tech.html">
+            <div class="thumb"><img src="assets/img/tech.jpg" alt="Tech"/></div>
+            <div class="meta">
+              <h3>Tech</h3>
+              <p class="muted">Smartphone, cuffie, accessori e tanto altro.</p>
+            </div>
+          </a>
+          <a class="item" href="casa.html">
+            <div class="thumb"><img src="assets/img/casa.jpg" alt="Casa"/></div>
+            <div class="meta">
+              <h3>Casa</h3>
+              <p class="muted">Prodotti utili per la casa a prezzo scontato.</p>
+            </div>
+          </a>
+        </div>
+      </section>
 
-    <!-- === TECH === -->
-    <section id="tech">
-      <h2>Offerte Tech</h2>
-      <div class="controls">
-        <input type="text" id="tech-search" placeholder="Cerca Tech...">
-        <select id="tech-sort">
-          <option value="default">Ordina</option>
-          <option value="price-asc">Prezzo ↑</option>
-          <option value="price-desc">Prezzo ↓</option>
-        </select>
-      </div>
-      <ul id="tech-list" class="list"><li>Caricamento…</li></ul>
-    </section>
+      <section class="card">
+        <h2>Guide e Consigli</h2>
+        <ul class="list">
+          <li><a href="guide.html#funko">Guida all’acquisto dei Funko Pop</a></li>
+          <li><a href="guide.html#tech">Come scegliere un buon paio di auricolari wireless</a></li>
+          <li><a href="guide.html#casa">Prodotti smart per la casa: i must-have del 2025</a></li>
+        </ul>
+      </section>
 
-    <!-- === CASA === -->
-    <section id="casa">
-      <h2>Offerte Casa</h2>
-      <div class="controls">
-        <input type="text" id="casa-search" placeholder="Cerca Casa...">
-        <select id="casa-sort">
-          <option value="default">Ordina</option>
-          <option value="price-asc">Prezzo ↑</option>
-          <option value="price-desc">Prezzo ↓</option>
-        </select>
-      </div>
-      <ul id="casa-list" class="list"><li>Caricamento…</li></ul>
-    </section>
+      <section class="card" id="telegram">
+        <h2>Unisciti al nostro Canale Telegram</h2>
+        <p>Ricevi le offerte in tempo reale direttamente su Telegram.</p>
+        <a class="btn primary" href="https://t.me/dealsforever" target="_blank" rel="noopener">📲 Segui su Telegram</a>
+      </section>
+    </main>
 
-    <!-- === TELEGRAM === -->
-    <section id="telegram" class="telegram">
-      <h2>Seguici su Telegram 📲</h2>
-      <p>Ricevi ogni giorno le migliori offerte direttamente sul tuo smartphone.</p>
-      <a href="https://t.me/TUO_CANALTELEGRAM" target="_blank">Unisciti al canale</a>
-      <div style="margin-top:12px">
-        <iframe src="https://t.me/s/TUO_CANALTELEGRAM" width="100%" height="400" frameborder="0"></iframe>
-      </div>
-    </section>
+    <footer>
+      © <span id="year"></span> Deals Forever · 
+      <a href="privacy.html">Privacy</a> · 
+      <a href="guide.html">Guide</a> · 
+      <a href="about.html">Chi siamo</a>
+    </footer>
   </div>
 
-  <script>
-    const FUNKO_JSON="funko.json";
-    const TECH_JSON="tech.json";
-    const CASA_JSON="casa.json";
-
-    function calcDiscount(p,o){
-      let pa=parseFloat((p||"0").replace(/[^\d,]/g,"").replace(",","."));
-      let po=parseFloat((o||"0").replace(/[^\d,]/g,"").replace(",","."));
-      if(po && pa) return "-"+Math.round((1-pa/po)*100)+"%";
-      return "";
-    }
-
-    async function loadJson(path,fallback){try{let r=await fetch(path);if(!r.ok)throw 0;return r.json()}catch{return fallback}}
-
-    function renderList({data,containerId,searchId,sortId}){
-      const container=document.getElementById(containerId);
-      const search=document.getElementById(searchId);
-      const sort=document.getElementById(sortId);
-      let current=data;
-
-      function draw(){
-        let q=search.value.toLowerCase();
-        let items=current.filter(x=>x.title.toLowerCase().includes(q));
-        if(sort.value.includes("price")){
-          items=items.sort((a,b)=>{
-            let pa=parseFloat((a.price||"0").replace(/[^\d,]/g,"").replace(",","."));
-            let pb=parseFloat((b.price||"0").replace(/[^\d,]/g,"").replace(",","."));
-            return sort.value==="price-asc"?pa-pb:pb-pa;
-          });
-        }
-        container.innerHTML=items.map(item=>{
-          let badge=calcDiscount(item.price,item.original_price);
-          return `<li class="item">
-            ${badge?`<div class="badge">${badge}</div>`:""}
-            <div class="thumb"><img src="${item.image}" alt="${item.title}"></div>
-            <div class="meta">
-              <h3>${item.title}</h3>
-              <div class="review">${item.review||"Scopri le caratteristiche principali di questo prodotto."}</div>
-              <div class="price">
-                ${item.original_price?`<span class="orig">${item.original_price}</span>`:""}
-                <span class="current">${item.price||""}</span>
-              </div>
-              <div class="actions">
-                <a class="btn primary" href="${item.link}" target="_blank">Vai su Amazon</a>
-                <a class="btn share" href="https://t.me/share/url?url=${encodeURIComponent(item.link)}&text=${encodeURIComponent(item.title)}" target="_blank">Condividi</a>
-              </div>
-            </div>
-          </li>`;
-        }).join("")||"<li>Nessun risultato</li>";
-      }
-
-      search.oninput=draw;
-      sort.onchange=draw;
-      draw();
-    }
-
-    (async()=>{
-      let funko=await loadJson(FUNKO_JSON,[{title:"Funko Demo",image:"https://via.placeholder.com/150",price:"14,99 €",original_price:"24,99 €",link:"#"}]);
-      let tech=await loadJson(TECH_JSON,[{title:"Tech Demo",image:"https://via.placeholder.com/150",price:"49,99 €",original_price:"79,99 €",link:"#"}]);
-      let casa=await loadJson(CASA_JSON,[{title:"Casa Demo",image:"https://via.placeholder.com/150",price:"29,99 €",original_price:"59,99 €",link:"#"}]);
-      renderList({data:funko,containerId:"funko-list",searchId:"funko-search",sortId:"funko-sort"});
-      renderList({data:tech,containerId:"tech-list",searchId:"tech-search",sortId:"tech-sort"});
-      renderList({data:casa,containerId:"casa-list",searchId:"casa-search",sortId:"casa-sort"});
-    })();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
