@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever — Offerte Funko Pop</title>
+  <title>Offerte Funko Pop - Deals Forever</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/render.js" defer></script>
 </head>
@@ -18,32 +18,35 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="funko.html">Funko Pop</a>
+      <a href="funko.html" class="active">Funko Pop</a>
       <a href="tech.html">Tech</a>
       <a href="casa.html">Casa</a>
+      <a href="guide/index.html">Guide</a>
       <a href="about.html">Chi Siamo</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
-  <div class="wrap">
-    <main>
-      <section id="funko" class="card">
-        <h1>Offerte Funko Pop</h1>
-        <p class="muted">Colleziona i Funko Pop in offerta oggi su Amazon.</p>
-        <ul id="funko-list" class="list"><li>Caricamento offerte…</li></ul>
-        <div id="funko-pager" class="pagination"></div>
-      </section>
-      <p><a href="index.html" class="btn">⬅ Torna alla Home</a></p>
-    </main>
+  <main class="wrap">
+    <section class="hero card">
+      <h1>Offerte Funko Pop 🎁</h1>
+      <p>Scopri le migliori figure collezionabili in offerta su Amazon.</p>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Deals Forever · <a href="privacy.html">Privacy</a>
-    </footer>
-  </div>
+    <section class="card">
+      <ul id="funko-list" class="list"></ul>
+      <div id="funko-pager" class="pagination"></div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Deals Forever
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    renderCategory({ dataFile: "funko.json", containerId: "funko-list", pagerId: "funko-pager", perPage: 12 });
+    document.getElementById('year').textContent=new Date().getFullYear();
+    renderCategory({ dataFile:"funko.json", containerId:"funko-list", pagerId:"funko-pager", perPage:12 });
   </script>
 </body>
 </html>
