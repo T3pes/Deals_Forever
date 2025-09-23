@@ -22,22 +22,20 @@ a {
 }
 
 .site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background: rgba(11, 16, 32, .95);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 16px;
-	z-index: 1000
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(11,16,32,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
 .brand {
-	display: flex;
-	gap: 12px;
-	align-items: center
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo {
@@ -50,10 +48,23 @@ a {
 	font-size: 18px
 }
 
-.main-nav a {
-	margin-left: 8px;
-	padding: 6px 8px;
-	border-radius: 8px
+.main-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-menu {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #0b1020;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-menu:hover {
+  background: #4b82ff; /* esempio colore al passaggio */
 }
 
 .wrap {
