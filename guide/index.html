@@ -4,113 +4,47 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Guide - Deals Forever</title>
-  <meta name="description" content="Guide pratiche su Funko Pop, Tech e Casa. Consigli e approfondimenti per risparmiare e scegliere meglio." />
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .guide-grid {
-      display: grid;
-      gap: 20px;
-    }
-    @media(min-width:700px){
-      .guide-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-    }
-    @media(min-width:1000px){
-      .guide-grid {
-        grid-template-columns: repeat(3,1fr);
-      }
-    }
-    .guide-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,.06);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .guide-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 16px rgba(0,0,0,.4);
-    }
-    .guide-card h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-    .guide-card p {
-      flex: 1;
-      color: var(--muted);
-    }
-    .guide-card .actions {
-      margin-top: 12px;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="brand">
-      <div class="logo" aria-hidden>🧸</div>
+      <div class="logo">🧸</div>
       <div>
         <div style="font-weight:800">Deals Forever</div>
-        <div class="mini">Guide e Consigli</div>
+        <div class="mini">Offerte giornaliere</div>
       </div>
     </div>
-    <nav aria-label="Navigazione principale">
+    <nav>
       <a href="../index.html">Home</a>
       <a href="../funko.html">Funko Pop</a>
       <a href="../tech.html">Tech</a>
       <a href="../casa.html">Casa</a>
-      <a href="index.html">Guide</a>
+      <a href="index.html" class="active">Guide</a>
       <a href="../about.html">Chi Siamo</a>
-      <a href="../index.html#contatti">Contatti</a>
       <a href="../privacy.html">Privacy</a>
     </nav>
   </header>
 
   <main class="wrap">
     <section class="hero card">
-      <h1>Le nostre Guide</h1>
-      <p>Consigli pratici, approfondimenti e trucchi per risparmiare e scegliere i prodotti giusti su Amazon.</p>
+      <h1>Guide pratiche 📚</h1>
+      <p>Consigli e tutorial per scegliere i prodotti giusti.</p>
     </section>
 
-    <section class="guide-grid">
-      <article class="guide-card">
-        <h2>🎁 Guida ai Funko Pop</h2>
-        <p>Scopri come collezionare e acquistare i Funko Pop migliori al miglior prezzo.</p>
-        <div class="actions">
-          <a href="collezionismo-funko.html" class="btn primary">Leggi la guida</a>
-        </div>
-      </article>
-
-      <article class="guide-card">
-        <h2>💻 Guida agli acquisti Tech</h2>
-        <p>Consigli su smartphone, cuffie, accessori e tutto ciò che riguarda la tecnologia.</p>
-        <div class="actions">
-          <a href="tech-smart.html" class="btn primary">Leggi la guida</a>
-        </div>
-      </article>
-
-      <article class="guide-card">
-        <h2>🏡 Guida Casa & Lifestyle</h2>
-        <p>Prodotti per la casa, arredamento smart e gadget utili per la vita di tutti i giorni.</p>
-        <div class="actions">
-          <a href="deals-casa.html" class="btn primary">Leggi la guida</a>
-        </div>
-      </article>
+    <section class="card">
+      <ul>
+        <li><a href="funko.html">Guida all’acquisto dei Funko Pop</a></li>
+        <li><a href="tech.html">Come scegliere un auricolare wireless</a></li>
+        <li><a href="casa.html">Accessori smart per la casa</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Deals Forever · 
-    <a href="../privacy.html">Privacy</a> · 
-    <a href="index.html">Guide</a> · 
-    <a href="../about.html">Chi siamo</a>
+    © <span id="year"></span> Deals Forever
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
