@@ -18,8 +18,8 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="funko.html" class="active">Funko Pop</a>
-      <a href="tech.html">Tech</a>
+      <a href="funko.html">Funko Pop</a>
+      <a href="tech.html" class="active">Tech</a>
       <a href="casa.html">Casa</a>
       <a href="guide/index.html">Guide</a>
       <a href="about.html">Chi Siamo</a>
@@ -30,13 +30,13 @@
 
   <main class="wrap">
     <section class="hero card">
-      <h1>Offerte Funko Pop 🎁</h1>
-      <p>Scopri le migliori figure collezionabili in offerta su Amazon.</p>
+      <h1>Offerte Tech 💻</h1>
+      <p>Scopri i migliori sconti su tecnologia, elettronica e accessori.</p>
     </section>
 
     <section class="card">
-      <ul id="funko-list" class="list"></ul>
-      <div id="funko-pager" class="pagination"></div>
+      <ul id="tech-list" class="list"></ul>
+      <div id="tech-pager" class="pagination"></div>
     </section>
   </main>
 
@@ -45,7 +45,7 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
     renderCategory({ dataFile:"tech.json", containerId:"tech-list", pagerId:"tech-pager", perPage:12 });
   </script>
 </body>
