@@ -1,56 +1,105 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever - Offerte giornaliere</title>
-  <meta name="description" content="Offerte giornaliere su Amazon: Funko Pop, Tech, Casa e tanto altro." />
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deals Forever — Offerte giornaliere</title>
+  <meta name="description" content="Offerte giornaliere sui migliori Funko Pop, prodotti Tech e articoli per la Casa. Scopri sconti, guide e consigli per risparmiare su Amazon." />
+  <meta name="author" content="Deals Forever" />
+  <meta property="og:title" content="Deals Forever — Offerte giornaliere" />
+  <meta property="og:description" content="Offerte selezionate, aggiornate ogni giorno." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="brand">
-      <div class="logo">🧸</div>
+      <div class="logo" aria-hidden>🧸</div>
       <div>
-        <div style="font-weight:800">Deals Forever</div>
+        <div class="site-name">Deals Forever</div>
         <div class="mini">Offerte giornaliere</div>
       </div>
     </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="funko.html">Funko Pop</a>
-      <a href="tech.html">Tech</a>
-      <a href="casa.html">Casa</a>
-      <a href="guide/index.html">Guide</a>
-      <a href="about.html">Chi Siamo</a>
-      <a href="index.html#contatti">Contatti</a>
-      <a href="privacy.html">Privacy</a>
+    <nav aria-label="Navigazione principale">
+      <a href="index.html" class="btn-nav">Home</a>
+      <a href="funko.html" class="btn-nav">Funko Pop</a>
+      <a href="tech.html" class="btn-nav">Tech</a>
+      <a href="casa.html" class="btn-nav">Casa</a>
+      <a href="guide.html" class="btn-nav">Guide</a>
+      <a href="about.html" class="btn-nav">Chi Siamo</a>
+      <a href="privacy.html" class="btn-nav">Privacy</a>
     </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero card">
-      <h1>Benvenuto su Deals Forever 🎉</h1>
-      <p>Ogni giorno selezioniamo per te le migliori offerte Amazon. Scopri sconti unici e consigli utili.</p>
-    </section>
+  <!-- Contenuto principale -->
+  <div class="wrap">
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero card">
+        <h1>Offerte Funko Pop, Tech & Casa — ogni giorno</h1>
+        <p>Selezioniamo le migliori offerte su Amazon. Qui trovi offerte aggiornate, guide e consigli per scegliere meglio. I link sono affiliati — potremmo ricevere una commissione senza costi aggiuntivi per te.</p>
+        <div class="disclosure">
+          <strong>Disclosure:</strong> Partecipiamo al programma <strong>Amazon EU Associates</strong>. Alcuni link sono di affiliazione.  
+          Questo significa che se acquisti tramite i nostri link, potremmo guadagnare una piccola commissione, senza costi extra per te.
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>Perché seguirci?</h2>
-      <ul>
-        <li>✅ Offerte aggiornate giornalmente</li>
-        <li>✅ Recensioni brevi e pratiche</li>
-        <li>✅ Selezione di prodotti affidabili</li>
-      </ul>
-    </section>
-  </main>
+      <!-- Sezioni categorie -->
+      <section id="funko" class="card">
+        <h2>Offerte Funko Pop</h2>
+        <ul id="funko-list" class="list" aria-live="polite">
+          <li class="note">Caricamento offerte…</li>
+        </ul>
+        <div id="funko-pager" class="pagination"></div>
+        <div class="more-link"><a href="funko.html">🔎 Vedi tutte le offerte Funko Pop</a></div>
+      </section>
 
-  <footer>
-    © <span id="year"></span> Deals Forever · 
-    <a href="privacy.html">Privacy</a> · 
-    <a href="guide/index.html">Guide</a> · 
-    <a href="about.html">Chi siamo</a>
-  </footer>
+      <section id="tech" class="card">
+        <h2>Offerte Tech</h2>
+        <ul id="tech-list" class="list" aria-live="polite">
+          <li class="note">Caricamento offerte…</li>
+        </ul>
+        <div id="tech-pager" class="pagination"></div>
+        <div class="more-link"><a href="tech.html">🔎 Vedi tutte le offerte Tech</a></div>
+      </section>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+      <section id="casa" class="card">
+        <h2>Offerte Casa</h2>
+        <ul id="casa-list" class="list" aria-live="polite">
+          <li class="note">Caricamento offerte…</li>
+        </ul>
+        <div id="casa-pager" class="pagination"></div>
+        <div class="more-link"><a href="casa.html">🔎 Vedi tutte le offerte Casa</a></div>
+      </section>
+
+      <!-- Contatti -->
+      <section id="contatti" class="card">
+        <h2>Contatti</h2>
+        <p>Per richieste commerciali o rimozione contenuti:  
+          <a href="mailto:flaviopaone91@gmail.com">flaviopaone91@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      © <span id="year"></span> Deals Forever · 
+      <a href="privacy.html">Privacy</a> · 
+      <a href="guide.html">Guide</a> · 
+      <a href="about.html">Chi siamo</a>
+    </footer>
+  </div>
+
+  <!-- Script -->
+  <script src="assets/js/render.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    renderCategory({ dataFile: "funko.json", containerId: "funko-list", pagerId: "funko-pager", perPage: 6 });
+    renderCategory({ dataFile: "tech.json", containerId: "tech-list", pagerId: "tech-pager", perPage: 6 });
+    renderCategory({ dataFile: "casa.json", containerId: "casa-list", pagerId: "casa-pager", perPage: 6 });
+  </script>
 </body>
 </html>
