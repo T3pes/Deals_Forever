@@ -1,35 +1,16 @@
 <!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever — Offerte Tech</title>
-  <link rel="stylesheet" href="assets/style.css"/>
-</head>
+<html lang="it"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Offerte Tech — Deals Forever</title><link rel="stylesheet" href="assets/css/style.css"/></head>
 <body>
-  <header>
-    <div class="brand"><div class="logo">💻</div><div>Deals Forever</div></div>
-    <nav><a href="index.html">← Home</a></nav>
-  </header>
-
-  <div class="wrap">
-    <main>
-      <section class="card">
-        <h1>Offerte Tech</h1>
-        <p>Scopri le migliori offerte tecnologiche su Amazon.</p>
-        <ul id="tech-list" class="list"><li>Caricamento…</li></ul>
-        <div id="tech-pager" class="pagination"></div>
-      </section>
-    </main>
-  </div>
-
-  <script src="assets/render.js"></script>
-  <script>
-    renderCategory({
-      dataFile: "data/tech.json",
-      containerId: "tech-list",
-      pagerId: "tech-pager"
-    });
-  </script>
+  <header class="site-header"><div class="brand"><div class="logo">💻</div><div class="brand-text"><strong>Deals Forever</strong></div></div><nav class="main-nav"><a href="index.html">Home</a><a href="funko.html">Funko Pop</a><a href="tech.html" class="active">Tech</a><a href="casa.html">Casa</a></nav></header>
+  <main class="wrap">
+    <p class="note"><a href="index.html">← Torna alla Home</a></p>
+    <section class="card"><h1>Offerte Tech</h1><p class="muted">Scopri le migliori offerte tecnologiche su Amazon.</p>
+      <div class="controls"><label>Mostra</label><select id="tech-page-size"><option value="6">6</option><option value="12" selected>12</option></select><label>Ordina</label><select id="tech-sort"><option value="default">Predefinito</option><option value="price-asc">Prezzo ↑</option><option value="price-desc">Prezzo ↓</option></select></div>
+      <ul id="tech-list" class="list"><li class="note">Caricamento offerte…</li></ul><div id="tech-pager" class="pagination"></div></section>
+  </main>
+  <footer class="site-footer">© <span id="year"></span> Deals Forever</footer>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();
+  (async function(){const tech=await loadJsonOrFallback('data/tech.json',[]); renderCategory({data:tech,containerId:'tech-list',pagerId:'tech-pager',pageSizeSelectId:'tech-page-size',sortSelectId:'tech-sort'});})();</script>
 </body>
 </html>
