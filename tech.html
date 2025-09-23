@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever — Offerte Tech</title>
+  <title>Offerte Tech - Deals Forever</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/render.js" defer></script>
 </head>
 <body>
   <header>
     <div class="brand">
-      <div class="logo">💻</div>
+      <div class="logo">🧸</div>
       <div>
         <div style="font-weight:800">Deals Forever</div>
         <div class="mini">Offerte giornaliere</div>
@@ -18,32 +18,35 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="funko.html">Funko Pop</a>
+      <a href="funko.html" class="active">Funko Pop</a>
       <a href="tech.html">Tech</a>
       <a href="casa.html">Casa</a>
+      <a href="guide/index.html">Guide</a>
       <a href="about.html">Chi Siamo</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
-  <div class="wrap">
-    <main>
-      <section id="tech" class="card">
-        <h1>Offerte Tech</h1>
-        <p class="muted">Le migliori offerte di elettronica e gadget tech.</p>
-        <ul id="tech-list" class="list"><li>Caricamento offerte…</li></ul>
-        <div id="tech-pager" class="pagination"></div>
-      </section>
-      <p><a href="index.html" class="btn">⬅ Torna alla Home</a></p>
-    </main>
+  <main class="wrap">
+    <section class="hero card">
+      <h1>Offerte Funko Pop 🎁</h1>
+      <p>Scopri le migliori figure collezionabili in offerta su Amazon.</p>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Deals Forever · <a href="privacy.html">Privacy</a>
-    </footer>
-  </div>
+    <section class="card">
+      <ul id="funko-list" class="list"></ul>
+      <div id="funko-pager" class="pagination"></div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Deals Forever
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    renderCategory({ dataFile: "tech.json", containerId: "tech-list", pagerId: "tech-pager", perPage: 12 });
+    document.getElementById('year').textContent=new Date().getFullYear();
+    renderCategory({ dataFile:"tech.json", containerId:"tech-list", pagerId:"tech-pager", perPage:12 });
   </script>
 </body>
 </html>
