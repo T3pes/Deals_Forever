@@ -1,6 +1,6 @@
-// assets/render.js
+// assets/js/render.js
 
-function renderCategory({ dataFile, containerId, pagerId, perPage = 6 }) {
+function renderCategory({ dataFile, containerId, pagerId, perPage = 12 }) {
   const container = document.getElementById(containerId);
   const pager = document.getElementById(pagerId);
 
@@ -30,7 +30,7 @@ function renderCategory({ dataFile, containerId, pagerId, perPage = 6 }) {
           li.className = "card item";
 
           const discount = item.original_price && item.price
-            ? Math.round(((item.original_price - item.price) / item.original_price) * 100)
+            ? Math.round(((parseFloat(item.original_price) - parseFloat(item.price)) / parseFloat(item.original_price)) * 100)
             : null;
 
           li.innerHTML = `
@@ -42,12 +42,12 @@ function renderCategory({ dataFile, containerId, pagerId, perPage = 6 }) {
               <h3>${shorten(item.title, 90)}</h3>
               <p class="review">${item.review || "⭐ Breve recensione non disponibile"}</p>
               <p>
-                <strong>💰 €${item.price}</strong>
-                ${item.original_price ? `<span class="old">€${item.original_price}</span>` : ""}
+                <strong>💰 ${item.price}</strong>
+                ${item.original_price ? `<span class="old">${item.original_price}</span>` : ""}
               </p>
               <div class="actions">
-                <a href="${item.url}" class="btn primary" target="_blank" rel="nofollow noopener">Vai su Amazon</a>
-                <button class="btn secondary" onclick="shareLink('${item.url}')">Condividi</button>
+                <a href="${item.link}" class="btn primary" target="_blank" rel="nofollow noopener">Vai su Amazon</a>
+                <button class="btn secondary" onclick="shareLink('${item.link}')">Condividi</button>
               </div>
             </div>
           `;
@@ -81,9 +81,9 @@ function shorten(text, max = 100) {
   return text.length > max ? text.slice(0, max) + "…" : text;
 }
 
-// 📲 condivisione
+// 📲 condivisione con referral Amazon
 function shareLink(url) {
-  const tag = "?tag=iltuoid-21"; // <-- Inserisci qui il tuo tracking ID Amazon
+  const tag = "?tag=iltuoid-21"; // 🔗 inserisci qui il tuo Associate Tag
   const fullUrl = url.includes("?") ? url + "&" + tag.slice(1) : url + tag;
 
   if (navigator.share) {
@@ -96,3 +96,10 @@ function shareLink(url) {
     alert("🔗 Link copiato negli appunti!");
   }
 }
+
+// === Avvio rendering categorie ===
+document.addEventListener("DOMContentLoaded", () => {
+  renderCategory({ dataFile: "funko.json", containerId: "funko-list", pagerId: "funko-pager" });
+  renderCategory({ dataFile: "tech.json", containerId: "tech-list", pagerId: "tech-pager" });
+  renderCategory({ dataFile: "casa.json", containerId: "casa-list", pagerId: "casa-pager" });
+});
