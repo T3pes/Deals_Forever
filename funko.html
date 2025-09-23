@@ -3,99 +3,47 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Offerte Funko Pop — Deals Forever</title>
-  <meta name="description" content="Le migliori offerte Funko Pop aggiornate ogni giorno su Amazon. Scopri sconti, recensioni e collezioni in evidenza." />
-  <meta name="author" content="Deals Forever" />
-  <meta property="og:title" content="Offerte Funko Pop — Deals Forever" />
-  <meta property="og:description" content="Scopri le migliori offerte Funko Pop con recensioni e sconti esclusivi." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1020" />
-  <link rel="stylesheet" href="assets/style.css"/>
+  <title>Deals Forever — Offerte Funko Pop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/render.js" defer></script>
 </head>
 <body>
   <header>
     <div class="brand">
-      <div class="logo" aria-hidden>🧸</div>
+      <div class="logo">🧸</div>
       <div>
         <div style="font-weight:800">Deals Forever</div>
         <div class="mini">Offerte giornaliere</div>
       </div>
     </div>
-    <nav aria-label="Navigazione principale">
+    <nav>
       <a href="index.html">Home</a>
-      <a href="funko.html" class="active">Funko Pop</a>
+      <a href="funko.html">Funko Pop</a>
       <a href="tech.html">Tech</a>
       <a href="casa.html">Casa</a>
-      <a href="guide.html">Guide</a>
       <a href="about.html">Chi Siamo</a>
-      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
   <div class="wrap">
     <main>
-      <p class="note"><a href="index.html">← Torna alla Home</a></p>
-
-      <section class="card" aria-labelledby="funko-h">
-        <h1 id="funko-h">Offerte Funko Pop</h1>
-        <p class="muted">Colleziona i tuoi personaggi preferiti risparmiando. Offerte aggiornate ogni giorno.</p>
-
-        <div class="controls">
-          <label class="mini">Mostra</label>
-          <select id="funko-page-size">
-            <option value="12">12</option>
-            <option value="24">24</option>
-            <option value="50" selected>50</option>
-          </select>
-
-          <label class="mini">Ordina</label>
-          <select id="funko-sort">
-            <option value="default">Predefinito</option>
-            <option value="price-asc">Prezzo ↑</option>
-            <option value="price-desc">Prezzo ↓</option>
-            <option value="rating-desc">Valutazione ↓</option>
-          </select>
-
-          <label class="mini">Prezzo min</label>
-          <input type="number" id="price-min" min="0" style="width:80px"/>
-
-          <label class="mini">Prezzo max</label>
-          <input type="number" id="price-max" min="0" style="width:80px"/>
-        </div>
-
-        <ul id="funko-list" class="list" aria-live="polite">
-          <li class="note">Caricamento offerte…</li>
-        </ul>
-        <div id="funko-pager" class="pagination" role="navigation" aria-label="Paginazione Funko"></div>
+      <section id="funko" class="card">
+        <h1>Offerte Funko Pop</h1>
+        <p class="muted">Colleziona i Funko Pop in offerta oggi su Amazon.</p>
+        <ul id="funko-list" class="list"><li>Caricamento offerte…</li></ul>
+        <div id="funko-pager" class="pagination"></div>
       </section>
+      <p><a href="index.html" class="btn">⬅ Torna alla Home</a></p>
     </main>
 
     <footer>
-      © <span id="year"></span> Deals Forever · 
-      <a href="privacy.html">Privacy</a> · 
-      <a href="guide.html">Guide</a> · 
-      <a href="about.html">Chi siamo</a>
+      © <span id="year"></span> Deals Forever · <a href="privacy.html">Privacy</a>
     </footer>
   </div>
 
-  <script src="js/main.js"></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (async function init(){
-      const funko = await loadJsonOrFallback("data/funko.json", []);
-      renderList({
-        data: funko,
-        containerId:'funko-list',
-        pagerId:'funko-pager',
-        pageSizeSelectId:'funko-page-size',
-        sortSelectId:'funko-sort',
-        filters:{
-          minPriceInputId:'price-min',
-          maxPriceInputId:'price-max'
-        }
-      });
-    })();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderCategory({ dataFile: "funko.json", containerId: "funko-list", pagerId: "funko-pager", perPage: 12 });
   </script>
 </body>
 </html>
