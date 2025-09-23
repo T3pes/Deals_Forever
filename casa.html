@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Deals Forever — Offerte Casa</title>
+  <title>Offerte Casa - Deals Forever</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/render.js" defer></script>
 </head>
 <body>
   <header>
     <div class="brand">
-      <div class="logo">🏠</div>
+      <div class="logo">🧸</div>
       <div>
         <div style="font-weight:800">Deals Forever</div>
         <div class="mini">Offerte giornaliere</div>
@@ -20,30 +20,33 @@
       <a href="index.html">Home</a>
       <a href="funko.html">Funko Pop</a>
       <a href="tech.html">Tech</a>
-      <a href="casa.html">Casa</a>
+      <a href="casa.html" class="active">Casa</a>
+      <a href="guide/index.html">Guide</a>
       <a href="about.html">Chi Siamo</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
-  <div class="wrap">
-    <main>
-      <section id="casa" class="card">
-        <h1>Offerte Casa</h1>
-        <p class="muted">Sconti su articoli per la casa e arredamento.</p>
-        <ul id="casa-list" class="list"><li>Caricamento offerte…</li></ul>
-        <div id="casa-pager" class="pagination"></div>
-      </section>
-      <p><a href="index.html" class="btn">⬅ Torna alla Home</a></p>
-    </main>
+  <main class="wrap">
+    <section class="hero card">
+      <h1>Offerte Casa 🏡</h1>
+      <p>Arreda e organizza la tua casa con le migliori offerte Amazon.</p>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Deals Forever · <a href="privacy.html">Privacy</a>
-    </footer>
-  </div>
+    <section class="card">
+      <ul id="casa-list" class="list"></ul>
+      <div id="casa-pager" class="pagination"></div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Deals Forever
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    renderCategory({ dataFile: "casa.json", containerId: "casa-list", pagerId: "casa-pager", perPage: 12 });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderCategory({ dataFile:"casa.json", containerId:"casa-list", pagerId:"casa-pager", perPage:12 });
   </script>
 </body>
 </html>
