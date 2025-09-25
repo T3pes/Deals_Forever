@@ -1,23 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Privacy — Deals Forever</title>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals Forever — Privacy Policy</title>
+  <meta name="description" content="Informativa sulla privacy per gli utenti di Deals Forever.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <div class="brand"><div class="logo">🔒</div><div>Deals Forever</div></div>
-    <nav><a href="index.html">← Home</a></nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">🧸</div>
+      <div class="brand-text">
+        <strong>Deals Forever</strong>
+        <span class="mini">Offerte giornaliere</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a class="btn-menu" href="index.html">Home</a>
+      <a class="btn-menu" href="funko.html">Funko Pop</a>
+      <a class="btn-menu" href="tech.html">Tech</a>
+      <a class="btn-menu" href="casa.html">Casa</a>
+      <a class="btn-menu" href="guide.html">Guide</a>
+      <a class="btn-menu" href="about.html">Chi Siamo</a>
+      <a class="btn-menu" href="privacy.html">Privacy</a>
+    </nav>
   </header>
 
+  <!-- Main -->
   <main class="wrap">
-  <section class="hero card">
-      <h1>Privacy e Disclosure</h1>
-      <p>Deals Forever partecipa al programma Amazon IT Associates. Alcuni link presenti nel sito sono di affiliazione: se effettui un acquisto tramite questi link, potremmo ricevere una commissione senza alcun costo aggiuntivo per te.</p>
-      <p>Non raccogliamo dati personali degli utenti. L’unico strumento di terze parti utilizzato è Amazon per la gestione delle affiliazioni.</p>
-  </section>
-</main>
+    <section class="card hero">
+      <h1>Privacy Policy</h1>
+      <p>La tua privacy è importante per noi. Questo sito utilizza link di affiliazione Amazon 
+         (programma Amazon EU Associates) per monetizzare i contenuti. 
+         Non raccogliamo dati personali sensibili e non vendiamo informazioni a terzi.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Deals Forever · 
+    <a href="privacy.html">Privacy</a> · 
+    <a href="guide.html">Guide</a> · 
+    <a href="about.html">Chi siamo</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
