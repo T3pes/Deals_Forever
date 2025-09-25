@@ -1,52 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Offerte Funko Pop - Deals Forever</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals Forever — Offerte Funko Pop</title>
+  <meta name="description" content="Scopri le migliori offerte Amazon sui Funko Pop. Sconti aggiornati, collezioni esclusive e idee regalo.">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/render.js" defer></script>
 </head>
 <body>
-  <header>
+  <!-- Header -->
+  <header class="site-header">
     <div class="brand">
       <div class="logo">🧸</div>
-      <div>
-        <div style="font-weight:800">Deals Forever</div>
-        <div class="mini">Offerte giornaliere</div>
+      <div class="brand-text">
+        <strong>Deals Forever</strong>
+        <span class="mini">Offerte giornaliere</span>
       </div>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="funko.html" class="active">Funko Pop</a>
-      <a href="tech.html">Tech</a>
-      <a href="casa.html">Casa</a>
-      <a href="guide/index.html">Guide</a>
-      <a href="about.html">Chi Siamo</a>
-      <a href="index.html#contatti">Contatti</a>
-      <a href="privacy.html">Privacy</a>
+    <nav class="main-nav">
+      <a class="btn-menu" href="index.html">Home</a>
+      <a class="btn-menu" href="funko.html">Funko Pop</a>
+      <a class="btn-menu" href="tech.html">Tech</a>
+      <a class="btn-menu" href="casa.html">Casa</a>
+      <a class="btn-menu" href="guide.html">Guide</a>
+      <a class="btn-menu" href="about.html">Chi Siamo</a>
+      <a class="btn-menu" href="privacy.html">Privacy</a>
     </nav>
   </header>
 
+  <!-- Main -->
   <main class="wrap">
-    <section class="hero card">
-      <h1>Offerte Funko Pop 🎁</h1>
-      <p>Scopri le migliori figure collezionabili in offerta su Amazon.</p>
+    <section class="card hero">
+      <h1>Offerte Funko Pop</h1>
+      <p>Ami collezionare i tuoi personaggi preferiti? Qui trovi le migliori offerte sui Funko Pop, sempre aggiornate. 
+         Dai supereroi alle icone del cinema: aggiungi pezzi unici alla tua collezione risparmiando.</p>
     </section>
 
     <section class="card">
-      <ul id="funko-list" class="list"></ul>
-      <div id="funko-pager" class="pagination"></div>
+      <h2>Lista offerte Funko</h2>
+      <ul class="list" id="funko-list">
+        <li class="note">Caricamento offerte…</li>
+      </ul>
+      <div class="pagination" id="funko-pager"></div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    © <span id="year"></span> Deals Forever
+    © <span id="year"></span> Deals Forever · 
+    <a href="privacy.html">Privacy</a> · 
+    <a href="guide.html">Guide</a> · 
+    <a href="about.html">Chi siamo</a>
   </footer>
 
+  <!-- Scripts -->
+  <script src="assets/js/render.js"></script>
   <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-    renderCategory({ dataFile:"funko.json", containerId:"funko-list", pagerId:"funko-pager", perPage:12 });
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderCategory({ dataFile: "data/funko.json", containerId: "funko-list", pagerId: "funko-pager" });
   </script>
 </body>
 </html>
