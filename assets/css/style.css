@@ -1,24 +1,38 @@
+:root {
+  --bg: #0b1020;
+  --card: #121a37;
+  --muted: #99a3c7;
+  --accent: #4b82ff;
+  --radius: 12px;
+}
+
+/* ===================== Base ===================== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #e7ecff;
+  font-family: Inter, system-ui, Arial;
+}
+a { color: var(--accent); text-decoration: none; }
+
 /* ===================== Header ===================== */
 .site-header {
   display: flex;
   justify-content: space-between; /* logo a sinistra, menu a destra */
   align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   background: rgba(11,16,32,0.95);
   padding: 10px 20px;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
-
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .logo {
   width: 40px;
   height: 40px;
@@ -28,56 +42,36 @@
   place-items: center;
   font-size: 18px;
 }
-
 .brand-text {
   display: flex;
   flex-direction: column;
 }
-
+.mini {
+  font-size: 12px;
+  color: var(--muted);
+}
 .main-nav {
   display: flex;
   gap: 10px;
 }
-
 .btn-menu {
   padding: 8px 12px;
   border-radius: 8px;
   background: var(--accent);
   color: #0b1020;
-  text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
 }
-
 .btn-menu:hover {
   background: #6ae7ff;
 }
 
-/* ===================== Footer ===================== */
-footer {
-  text-align: center;
-  color: var(--muted);
-  margin: 28px 0 16px;
-}
-
-footer a {
-  color: var(--accent);
-  margin: 0 4px;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===================== Hero / Wrap ===================== */
+/* ===================== Wrap & Cards ===================== */
 .wrap {
   max-width: 1100px;
   margin: 90px auto 60px; /* spazio per header fisso */
   padding: 20px;
 }
-
-/* ===================== Cards ===================== */
 .card {
   background: var(--card);
   padding: 16px;
@@ -85,81 +79,49 @@ footer a:hover {
   border: 1px solid rgba(255,255,255,.04);
   margin-bottom: 16px;
 }
-
-/* ===================== Grid Cards ===================== */
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.cat-card {
-  display: block;
-  padding: 12px;
+.hero p { margin-top: 6px; }
+.disclosure {
+  background: #063028;
   border-radius: 10px;
-  background: rgba(255, 255, 255, .02);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.cat-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.05);
-}
-
-.cat-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #0e6c4f;
+  color: #bff0d8;
+  margin-top: 12px;
 }
 
 /* ===================== List Items ===================== */
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+.list { list-style: none; padding: 0; margin: 0; }
 .item {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, .02);
+  background: rgba(255,255,255,.05);
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 10px;
   position: relative;
 }
-
 .thumb {
   width: 120px;
   height: 120px;
   flex-shrink: 0;
   border-radius: 8px;
   overflow: hidden;
-  background: #111;
+  background: #1a1f33;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
-.meta h3 {
-  margin: 0 0 6px;
-}
-
+.meta h3 { margin: 0 0 6px; }
 .price .current {
   font-weight: 800;
   color: #7ef6a6;
 }
-
 .badge {
   position: absolute;
   top: 8px;
@@ -179,30 +141,24 @@ footer a:hover {
   flex-wrap: wrap;
   margin: 8px 0;
 }
-
 .pagination {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
 }
-
 .page-btn {
   padding: 6px 10px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255,255,255,.04);
   background: transparent;
   color: var(--muted);
   cursor: pointer;
 }
-
 .page-btn.active {
   background: var(--accent);
   color: #051330;
 }
-
-.note {
-  color: var(--muted);
-}
+.note { color: var(--muted); }
 
 /* ===================== Buttons ===================== */
 .btn {
@@ -211,12 +167,20 @@ footer a:hover {
   border-radius: 8px;
   text-decoration: none;
 }
-
 .btn.primary {
   background: var(--accent);
   color: #051330;
 }
+.muted { color: var(--muted); }
 
-.muted {
+/* ===================== Footer ===================== */
+footer {
+  text-align: center;
   color: var(--muted);
+  margin: 28px 0 16px;
 }
+footer a {
+  color: var(--accent);
+  margin: 0 4px;
+}
+footer a:hover { text-decoration: underline; }
