@@ -99,7 +99,7 @@ function shareLink(url) {
 
 // === Avvio rendering categorie ===
 document.addEventListener("DOMContentLoaded", () => {
-  renderCategory({ dataFile: "funko.json", containerId: "funko-list", pagerId: "funko-pager" });
-  renderCategory({ dataFile: "tech.json", containerId: "tech-list", pagerId: "tech-pager" });
-  renderCategory({ dataFile: "casa.json", containerId: "casa-list", pagerId: "casa-pager" });
+  renderCategory({ dataFile: "data/funko.json", containerId: "funko-list", pagerId: "funko-pager" });
+  renderCategory({ dataFile: "data/tech.json", containerId: "tech-list", pagerId: "tech-pager" });
+  renderCategory({ dataFile: "data/casa.json", containerId: "casa-list", pagerId: "casa-pager" });
 });
