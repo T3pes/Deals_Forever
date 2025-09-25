@@ -1,22 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Chi siamo — Deals Forever</title>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals Forever — Chi siamo</title>
+  <meta name="description" content="Scopri chi c’è dietro Deals Forever: la nostra missione è trovare le migliori offerte su Amazon.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <div class="brand"><div class="logo">ℹ️</div><div>Deals Forever</div></div>
-    <nav><a href="index.html">← Home</a></nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">🧸</div>
+      <div class="brand-text">
+        <strong>Deals Forever</strong>
+        <span class="mini">Offerte giornaliere</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a class="btn-menu" href="index.html">Home</a>
+      <a class="btn-menu" href="funko.html">Funko Pop</a>
+      <a class="btn-menu" href="tech.html">Tech</a>
+      <a class="btn-menu" href="casa.html">Casa</a>
+      <a class="btn-menu" href="guide.html">Guide</a>
+      <a class="btn-menu" href="about.html">Chi Siamo</a>
+      <a class="btn-menu" href="privacy.html">Privacy</a>
+    </nav>
   </header>
 
+  <!-- Main -->
   <main class="wrap">
-  <section class="hero card">
-    <h1>Chi siamo 🤝</h1>
-    <p>Siamo appassionati di offerte e tecnologia. Il nostro obiettivo è aiutarti a risparmiare tempo e soldi trovando i migliori sconti su Amazon.</p>
-  </section>
-</main>
+    <section class="card hero">
+      <h1>Chi siamo</h1>
+      <p>Deals Forever nasce dalla passione per le offerte online e dal desiderio di aiutare le persone a risparmiare 
+         sui prodotti che amano. Ogni giorno selezioniamo articoli con il miglior rapporto qualità-prezzo, 
+         aggiungendo recensioni e contenuti utili.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Deals Forever · 
+    <a href="privacy.html">Privacy</a> · 
+    <a href="guide.html">Guide</a> · 
+    <a href="about.html">Chi siamo</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
