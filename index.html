@@ -1,92 +1,53 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deals Forever — Offerte giornaliere</title>
-  <meta name="description" content="Scopri ogni giorno le migliori offerte Amazon su Funko Pop, Tech e Casa. Consigli, guide e recensioni originali.">
-  <meta name="author" content="Deals Forever">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <!-- ===================== Header ===================== -->
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">🧸</div>
-      <div class="brand-text">
-        <strong>Deals Forever</strong>
-        <span class="mini">Offerte giornaliere</span>
-      </div>
-    </div>
-    <nav class="main-nav">
-      <a class="btn-menu" href="index.html">Home</a>
-      <a class="btn-menu" href="funko.html">Funko Pop</a>
-      <a class="btn-menu" href="tech.html">Tech</a>
-      <a class="btn-menu" href="casa.html">Casa</a>
-      <a class="btn-menu" href="guide.html">Guide</a>
-      <a class="btn-menu" href="about.html">Chi Siamo</a>
-      <a class="btn-menu" href="privacy.html">Privacy</a>
-    </nav>
-  </header>
+<!-- Hero -->
+<section class="card hero">
+  <h1>Le migliori offerte Amazon — ogni giorno</h1>
+  <p>Selezioniamo le migliori occasioni su Funko Pop, tecnologia e articoli per la casa. 
+     Recensioni brevi, consigli utili e link sempre aggiornati.  
+     I link sono affiliati: potremmo ricevere una commissione senza costi aggiuntivi per te.</p>
+  <div class="disclosure">
+    <strong>Disclosure:</strong> Partecipiamo al programma Amazon EU Associates.
+  </div>
+  <p>
+    Deals Forever è il tuo punto di riferimento per offerte selezionate ogni giorno su Amazon. 
+    Ti aiutiamo a risparmiare con prodotti utili, originali e con un buon rapporto qualità-prezzo.
+  </p>
+</section>
 
-  <!-- ===================== Main ===================== -->
-  <main class="wrap">
-    <!-- Hero -->
-    <section class="card hero">
-      <h1>Le migliori offerte Amazon — ogni giorno</h1>
-      <p>Selezioniamo le migliori occasioni su Funko Pop, tecnologia e articoli per la casa. 
-         Recensioni brevi, consigli utili e link sempre aggiornati.  
-         I link sono affiliati: potremmo ricevere una commissione senza costi aggiuntivi per te.</p>
-      <div class="disclosure">
-        <strong>Disclosure:</strong> Partecipiamo al programma Amazon EU Associates.
-      </div>
-    </section>
+<!-- Offerte Funko -->
+<section class="card">
+  <h2>Offerte Funko Pop</h2>
+  <p>
+    Sei un appassionato di collezionismo? Scopri le migliori offerte su Funko Pop ispirati a film, serie TV, videogiochi e molto altro. 
+    Aggiorniamo regolarmente questa sezione per offrirti prezzi competitivi su personaggi iconici e novità esclusive.
+  </p>
+  <ul class="list" id="funko-list">
+    <li class="note">Caricamento offerte…</li>
+  </ul>
+  <div class="pagination" id="funko-pager"></div>
+</section>
 
-    <!-- Offerte Funko -->
-    <section class="card">
-      <h2>Offerte Funko Pop</h2>
-      <ul class="list" id="funko-list">
-        <li class="note">Caricamento offerte…</li>
-      </ul>
-      <div class="pagination" id="funko-pager"></div>
-    </section>
+<!-- Offerte Tech -->
+<section class="card">
+  <h2>Offerte Tech</h2>
+  <p>
+    Ami la tecnologia? Qui trovi le offerte più interessanti su dispositivi elettronici, gadget utili e accessori per la vita digitale. 
+    Selezioniamo prodotti con ottime recensioni e disponibilità su Amazon, sempre aggiornati.
+  </p>
+  <ul class="list" id="tech-list">
+    <li class="note">Caricamento offerte…</li>
+  </ul>
+  <div class="pagination" id="tech-pager"></div>
+</section>
 
-    <!-- Offerte Tech -->
-    <section class="card">
-      <h2>Offerte Tech</h2>
-      <ul class="list" id="tech-list">
-        <li class="note">Caricamento offerte…</li>
-      </ul>
-      <div class="pagination" id="tech-pager"></div>
-    </section>
-
-    <!-- Offerte Casa -->
-    <section class="card">
-      <h2>Offerte Casa</h2>
-      <ul class="list" id="casa-list">
-        <li class="note">Caricamento offerte…</li>
-      </ul>
-      <div class="pagination" id="casa-pager"></div>
-    </section>
-  </main>
-
-  <!-- ===================== Footer ===================== -->
-  <footer>
-    © <span id="year"></span> Deals Forever · 
-    <a href="privacy.html">Privacy</a> · 
-    <a href="guide.html">Guide</a> · 
-    <a href="about.html">Chi siamo</a>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/render.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Carica le categorie
-    renderCategory({ dataFile: "data/funko.json", containerId: "funko-list", pagerId: "funko-pager" });
-    renderCategory({ dataFile: "data/tech.json", containerId: "tech-list", pagerId: "tech-pager" });
-    renderCategory({ dataFile: "data/casa.json", containerId: "casa-list", pagerId: "casa-pager" });
-  </script>
-</body>
-</html>
+<!-- Offerte Casa -->
+<section class="card">
+  <h2>Offerte Casa</h2>
+  <p>
+    Rinnova i tuoi spazi con articoli per la casa utili, eleganti e convenienti. In questa sezione trovi promozioni su utensili, 
+    arredi smart, decorazioni e oggetti pratici selezionati per migliorare la tua quotidianità.
+  </p>
+  <ul class="list" id="casa-list">
+    <li class="note">Caricamento offerte…</li>
+  </ul>
+  <div class="pagination" id="casa-pager"></div>
+</section>
