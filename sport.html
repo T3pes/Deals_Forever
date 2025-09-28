@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals Forever — Sport e Fitness</title>
+  <meta name="description" content="Scopri le migliori offerte Amazon su articoli sportivi e per il fitness: attrezzi, abbigliamento e accessori.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">🧸</div>
+      <div class="brand-text">
+        <strong>Deals Forever</strong>
+        <span class="mini">Offerte giornaliere</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a class="btn-menu" href="index.html">Home</a>
+      <a class="btn-menu" href="funko.html">Funko Pop</a>
+      <a class="btn-menu" href="tech.html">Tech</a>
+      <a class="btn-menu" href="casa.html">Casa</a>
+      <a class="btn-menu" href="sport.html">Sport</a>
+      <a class="btn-menu" href="guide.html">Guide</a>
+      <a class="btn-menu" href="about.html">Chi Siamo</a>
+      <a class="btn-menu" href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="wrap">
+    <section class="card hero">
+      <h1>Offerte Sport e Fitness</h1>
+      <p>
+        Cerchi attrezzatura sportiva, abbigliamento tecnico o accessori per l’allenamento a casa? 
+        In questa sezione troverai una selezione di offerte Amazon pensate per il tuo benessere fisico.
+      </p>
+      <p>
+        Dall'home gym all’escursionismo, ogni prodotto è scelto con attenzione per qualità e prezzo. 
+        Link affiliati presenti: potremmo ricevere una commissione sugli acquisti idonei.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Lista offerte Sport e Fitness</h2>
+      <p>
+        Le offerte vengono aggiornate frequentemente. Scopri attrezzi da allenamento, pesi, tappetini yoga, scarpe da corsa, smartwatch fitness e altro ancora!
+      </p>
+      <ul class="list" id="sport-list">
+        <li class="note">Caricamento offerte…</li>
+      </ul>
+      <div class="pagination" id="sport-pager"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Deals Forever · 
+    <a href="privacy.html">Privacy</a> · 
+    <a href="guide.html">Guide</a> · 
+    <a href="about.html">Chi siamo</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/render.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderCategory({ dataFile: "data/sport.json", containerId: "sport-list", pagerId: "sport-pager" });
+  </script>
+</body>
+</html>
