@@ -10,25 +10,7 @@
   </head>
   <body>
     <!-- ===================== Header ===================== -->
-    <header class="site-header">
-      <div class="brand">
-        <div class="logo">🧸</div>
-        <div class="brand-text">
-          <strong>Deals Forever</strong>
-          <span class="mini">Offerte giornaliere</span>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <a class="btn-menu" href="index.html">Home</a>
-        <a class="btn-menu" href="funko.html">Funko Pop</a>
-        <a class="btn-menu" href="tech.html">Tech</a>
-        <a class="btn-menu" href="casa.html">Casa</a>
-        <a class="btn-menu" href="sport.html">Sport</a>
-        <a class="btn-menu" href="guide.html">Guide</a>
-        <a class="btn-menu" href="about.html">Chi Siamo</a>
-        <a class="btn-menu" href="privacy.html">Privacy</a>
-      </nav>
-    </header>
+    <div id="site-header"></div>
     <!-- ===================== Main ===================== -->
     <main class="wrap">
       <!-- Hero -->
@@ -100,10 +82,10 @@
     </section>
 
     <!-- ===================== Footer ===================== -->
-    <footer> © <span id="year"></span> Deals Forever · <a href="privacy.html">Privacy</a> · <a href="guide.html">Guide</a> · <a href="about.html">Chi siamo</a>
-    </footer>
+    <div id="site-footer"></div>
     <!-- Scripts -->
     <script src="assets/js/render.js"></script>
+    <script src="assets/js/include.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear(); // Carica le categorie renderCategory({ dataFile: "data/funko.json", containerId: "funko-list", pagerId: "funko-pager" }); renderCategory({ dataFile: "data/tech.json", containerId: "tech-list", pagerId: "tech-pager" }); renderCategory({ dataFile: "data/casa.json", containerId: "casa-list", pagerId: "casa-pager" }); 
     </script>
