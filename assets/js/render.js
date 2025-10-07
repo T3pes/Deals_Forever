@@ -103,4 +103,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCategory({ dataFile: "data/tech.json", containerId: "tech-list", pagerId: "tech-pager" });
   renderCategory({ dataFile: "data/casa.json", containerId: "casa-list", pagerId: "casa-pager" });
   renderCategory({ dataFile: "data/sport.json", containerId: "sport-list", pagerId: "sport-pager" });
+  renderCategory({ dataFile: "data/haul.json", containerId: "haul-list", pagerId: "haul-pager" });
 });
